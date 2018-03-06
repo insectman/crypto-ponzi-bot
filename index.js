@@ -4,6 +4,13 @@ const Transaction = require('./transaction.model');
 
 mongoose.connect('mongodb://localhost:27017/cryptobot');
 
+const express    = require('express')
+const serveIndex = require('serve-index')
+const app = express()
+
+app.use('/', express.static('logs'), serveIndex('logs', {'icons': true}))
+app.listen(3000)
+
 const cryptoSportsGrabber = require('./contracts/crypto-sports');
 const cryptoMoviesGrabber = require('./contracts/crypto-movies');
 const cryptoArtsGrabber = require('./contracts/crypto-arts');
