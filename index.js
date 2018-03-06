@@ -65,11 +65,13 @@ const ethworldFunGrabber = require('./contracts/ethworld-fun');
 const cryptoCelebritiesGrabber = require('./contracts/crypto-celebrities');
 
 const etherArkGrabber = require('./contracts/ether-ark');
+const etherIslandsGrabber = require('./contracts/ether-islands');
 
 let testMode = false;
 
 etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.009 });
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
+etherIslandsGrabber({ testMode, buyMaxLimitOverride: 0.11 });
 
 testMode = true;
 
