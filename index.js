@@ -74,7 +74,6 @@ const cryptoWatchesGrabber = require('./contracts/crypto-watches');
 
 let testMode = false;
 
-etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.02 });
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 etherIslandsGrabber({ testMode, buyMaxLimitOverride: 0.11 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
@@ -88,6 +87,7 @@ cryptoWatchesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 
 testMode = true;
 
+etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.097 });
 
 /*
 // cryptoHeroGrabber({ testMode, buyMaxLimitOverride: 0.005 });
