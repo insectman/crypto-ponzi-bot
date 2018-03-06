@@ -1,7 +1,7 @@
 *.bak
 *.js.bak
 node_modules/
-logs/
+*.log
 package-lock.json
 
 *.env
