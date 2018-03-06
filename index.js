@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 const Token = require('./token.model');
 const Transaction = require('./transaction.model');
+const env = require('node-env-file');
 
-mongoose.connect('mongodb://localhost:27017/cryptobot');
+env(__dirname + '/.env');
+
+const { MONGODB_URI } = process.env;
+
+mongoose.connect(MONGODB_URI);
 
 const express    = require('express')
 const serveIndex = require('serve-index')
