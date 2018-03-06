@@ -1,11 +1,16 @@
 const ethers = require('ethers');
+const fs = require('fs');
 const env = require('node-env-file');
 // const { Wallet, /* utils, */ providers } = ethers;
 const { Wallet, utils, providers } = ethers;
 
 const provider = providers.getDefaultProvider('mainnet');
 
-env(__dirname + '/.env');
+const envPath = __dirname + '/.env';
+
+if (fs.existsSync(envPath)) {
+  env(envPath);
+}
 
 const { walletAddress, privateKey } = process.env;
 

@@ -1,19 +1,24 @@
 const mongoose = require('mongoose');
+const fs = require('fs');
 const Token = require('./token.model');
 const Transaction = require('./transaction.model');
 const env = require('node-env-file');
 
-env(__dirname + '/.env');
+const envPath = __dirname + '/.env';
+
+if (fs.existsSync(envPath)) {
+  env(envPath);
+}
 
 const { MONGODB_URI } = process.env;
 
 mongoose.connect(MONGODB_URI);
 
-const express    = require('express')
+const express = require('express')
 const serveIndex = require('serve-index')
 const app = express()
 
-app.use('/', express.static('logs'), serveIndex('logs', {'icons': true}))
+app.use('/', express.static('logs'), serveIndex('logs', { 'icons': true }))
 app.listen(3000)
 
 const cryptoSportsGrabber = require('./contracts/crypto-sports');
