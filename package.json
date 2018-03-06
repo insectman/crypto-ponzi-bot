@@ -1,0 +1,50 @@
+{
+  "name": "jd-steam-bot",
+  "version": "1.2.1",
+  "description": "steam bot",
+  "author": "Jacob Dombayan",
+  "main": "index.js",
+  "private": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=7.6"
+  },
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "@node-steam/data": "^1.1.0",
+    "@node-steam/market-pricing": "^2.1.0",
+    "async-request": "^1.2.0",
+    "cheerio": "^1.0.0-rc.2",
+    "colors": "^1.1.2",
+    "cuint": "^0.2.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "ethers": "^2.2.6",
+    "ethers-wallet": "^2.1.8",
+    "gimmeproxy-request": "^1.0.11",
+    "moment": "^2.20.1",
+    "mongoose": "^5.0.4",
+    "node-env-file": "^0.1.8",
+    "node-html-parser": "^1.1.6",
+    "proxies-freeproxylist": "^1.0.0",
+    "proxy-lists": "^1.14.1",
+    "proxylist": "^1.0.2",
+    "public-proxy-finder": "^0.1.1",
+    "request": "^2.83.0",
+    "request-async": "^0.1.0",
+    "scraper": "0.0.9",
+    "steam": "^1.4.0",
+    "steam-market-pricing": "^2.0.0",
+    "steam-totp": "^1.4.0",
+    "steam-tradeoffer-manager": "^2.7.1",
+    "steam-user": "^3.19.1",
+    "steam-weblogon": "^0.0.5",
+    "steamcommunity": "^3.30.7",
+    "steamid": "^1.1.0",
+    "util": "^0.10.3",
+    "web3": "github:ethereum/web3.js"
+  },
+  "devDependencies": {}
+}

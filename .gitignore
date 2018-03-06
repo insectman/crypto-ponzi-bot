@@ -1,0 +1,8 @@
+*.bak
+*.js.bak
+node_modules/
+logs/
+package-lock.json
+
+*.env
+.eslintrc
