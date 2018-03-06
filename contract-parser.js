@@ -99,7 +99,7 @@ const contractParserFactory = (params) => {
     }
 
     const purchaseBuyabletoken = async (tokenData) => {
-      if (!tokenData.owner || tokenData.owner !== walletAddress) {
+      if (!tokenData.owner || tokenData.owner === walletAddress) {
         return;
       }
       const { tokenId, formattedPrice } = tokenData;
@@ -171,9 +171,7 @@ const contractParserFactory = (params) => {
           return null;
         }
 
-        purchaseBuyabletoken(tokenData);
-
-        return tokenData;
+        await purchaseBuyabletoken(tokenData);
       } catch (e) {
         logError(e, 'getTokenData');
         return null;

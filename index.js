@@ -59,7 +59,6 @@ const bitGalleryGrabber = require('./contracts/bit-gallery');
 const cryptoSuperheroesGrabber = require('./contracts/crypto-superheroes');
 const cryptoSocialmediaGrabber = require('./contracts/crypto-socialmedia');
 const cryptoAvGrabber = require('./contracts/crypto-av');
-const etherDragonballGrabber = require('./contracts/ether-dragonball');
 const etherVillainsGrabber = require('./contracts/ether-villains');
 const ethworldFunGrabber = require('./contracts/ethworld-fun');
 const cryptoCelebritiesGrabber = require('./contracts/crypto-celebrities');
@@ -70,7 +69,7 @@ const etherAthletesGrabber = require('./contracts/ether-athletes');
 const mobSquadsGrabber = require('./contracts/mob-squads');
 const etherCitiesGrabber = require('./contracts/ether-cities');
 const etherDrugs69BlazeitGrabber = require('./contracts/etherdrugs-69blazeit');
-const cryptoCinemaGrabber = require('./contracts/crypto-cinema');
+const cryptoPhonesGrabber = require('./contracts/crypto-phones');
 
 
 let testMode = false;
@@ -80,13 +79,13 @@ cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 }
 etherIslandsGrabber({ testMode, buyMaxLimitOverride: 0.11 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
 etherCitiesGrabber({ testMode, buyMaxLimitOverride: 0.019 });
-
-testMode = true;
-
-etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
-etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoMasterpiecesGrabber({ testMode, buyMaxLimitOverride: 0.03 });
 cryptocitiEsGrabber({ testMode });
+etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
+etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
+cryptoPhonesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
+
+testMode = true;
 
 // cryptoCinemaGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 
@@ -142,7 +141,6 @@ cryptoCelebritiesGrabber({ testMode, buyMaxLimitOverride: 0.051 });
 /*
 // cryptoPizzaGrabber({ testMode, buyMaxLimitOverride: 0.005 });
 // etherEstatesGrabber({ testMode, buyMaxLimitOverride: 0.05 });
-// etherDragonballGrabber({ testMode, buyMaxLimitOverride: 0.001 });
 
 testMode = true;
 

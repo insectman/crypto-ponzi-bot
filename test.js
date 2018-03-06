@@ -21,7 +21,7 @@ const _contract = new ethers.Contract(contractAddress, contractABI, myWallet);
 
   // await Transaction.deleteMany({ name: 'metaquazr' });
   // await Transaction.deleteMany({});
-  await Transaction.deleteMany({ name: 'etherark' });
+  await Transaction.deleteMany({ name: 'cryptophones' });
   console.log('ok');
   // await Transaction.deleteMany({ name: 'cryptomayor' });
 
