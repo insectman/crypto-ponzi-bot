@@ -19,7 +19,7 @@ const serveIndex = require('serve-index')
 const app = express()
 
 app.use('/', express.static('logs'), serveIndex('logs', { 'icons': true }))
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
 
 const cryptoSportsGrabber = require('./contracts/crypto-sports');
 const cryptoMoviesGrabber = require('./contracts/crypto-movies');
