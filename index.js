@@ -70,6 +70,7 @@ const etherAthletesGrabber = require('./contracts/ether-athletes');
 const mobSquadsGrabber = require('./contracts/mob-squads');
 const etherCitiesGrabber = require('./contracts/ether-cities');
 const etherDrugs69BlazeitGrabber = require('./contracts/etherdrugs-69blazeit');
+const cryptoCinemaGrabber = require('./contracts/crypto-cinema');
 
 
 let testMode = false;
@@ -80,6 +81,7 @@ etherIslandsGrabber({ testMode, buyMaxLimitOverride: 0.11 });
 
 testMode = true;
 
+cryptoCinemaGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
 etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });

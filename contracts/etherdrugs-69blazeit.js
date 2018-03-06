@@ -42,6 +42,6 @@ module.exports = contractParser({
   contractAddress,
   contractABI,
   funcs,
-  name: 'ethercities',
+  name: 'etherdrugs69blazeit',
   buyMaxLimit,
 });
