@@ -3,6 +3,11 @@ const fs = require('fs');
 const Token = require('./token.model');
 const Transaction = require('./transaction.model');
 const env = require('node-env-file');
+const https = require("https");
+
+const express = require('express')
+const serveIndex = require('serve-index')
+const app = express()
 
 const envPath = __dirname + '/.env';
 
@@ -14,12 +19,14 @@ const { MONGODB_URI } = process.env;
 
 mongoose.connect(MONGODB_URI);
 
-const express = require('express')
-const serveIndex = require('serve-index')
-const app = express()
 
 app.use('/', express.static('logs'), serveIndex('logs', { 'icons': true }))
 app.listen(process.env.PORT || 3000)
+
+https.get("https://crypto-ponzi-bot.herokuapp.com/");
+setInterval(function () {
+  https.get("https://crypto-ponzi-bot.herokuapp.com/");
+}, 300000);
 
 const cryptoSportsGrabber = require('./contracts/crypto-sports');
 const cryptoMoviesGrabber = require('./contracts/crypto-movies');
@@ -84,10 +91,11 @@ etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
 etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoPhonesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoWatchesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
+etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.063 });
 
 testMode = true;
 
-etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.063 });
+
 
 /*
 // cryptoHeroGrabber({ testMode, buyMaxLimitOverride: 0.005 });
