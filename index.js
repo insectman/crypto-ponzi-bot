@@ -67,10 +67,11 @@ const cryptoCelebritiesGrabber = require('./contracts/crypto-celebrities');
 const etherArkGrabber = require('./contracts/ether-ark');
 
 let testMode = false;
-testMode = true;
 
 etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.009 });
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
+
+testMode = true;
 
 /*
 // cryptoHeroGrabber({ testMode, buyMaxLimitOverride: 0.005 });
