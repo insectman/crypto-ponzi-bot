@@ -98,7 +98,41 @@ const contractParserFactory = (params) => {
       return;
     }
 
-    buyableTokens = (await Promise.all(tokenIds.map(async (tokenId) => {
+    const purchaseBuyabletoken = async (tokenData) => {
+      if (!tokenData.owner || tokenData.owner !== walletAddress) {
+        return;
+      }
+      const { tokenId, formattedPrice } = tokenData;
+      if (memTransactions[`${tokenId}_${formattedPrice}`]) {
+        return;
+      }
+      const transaction = await Transaction.findOne({ name, tokenId, formattedPrice });
+      if (!transaction) {
+        try {
+          memTransactions[`${tokenId}_${formattedPrice}`] = true;
+          let str = `${name} buying  token № ${tokenId} at ${tokenData.formattedPrice}`;
+          logMsg(str, 'buyToken');
+          await (new Transaction({ name, tokenId, formattedPrice })).save();
+          if (testMode) {
+            return;
+          }
+          if (await getBalance() < formattedPrice) {
+            logMsg(`insufficient funds - ${await getBalance()} of ${formattedPrice}`, 'insFunds');
+            return;
+          }
+          const txn = await buyToken(contract, tokenData);
+          logMsg(`${JSON.stringify(tokenData)}${os.EOL}${JSON.stringify(txn)}`, 'buyToken');
+        } catch (e) {
+          memTransactions[`${tokenId}_${formattedPrice}`] = false;
+          await Transaction.findOneAndRemove({ name, tokenId, formattedPrice });
+          logError(e, 'buyToken');
+        }
+      } else {
+        memTransactions[`${tokenId}_${formattedPrice}`] = true;
+      }
+    }
+
+    await Promise.all(tokenIds.map(async (tokenId) => {
       let dbToken = null;
       try {
         if (typeof memTokens[tokenId] === 'undefined') {
@@ -107,15 +141,6 @@ const contractParserFactory = (params) => {
             memTokens[tokenId] = +dbToken.formattedPrice;
           }
         }
-
-        /*
-        if (memTokens[tokenId]) {
-          console.log(tokenId,
-            memTokens[tokenId],
-            getTokenMaxPrice(tokenId),
-            memTokens[tokenId] > getTokenMaxPrice(tokenId));
-        }
-        */
 
         if (memTokens[tokenId]
           && memTokens[tokenId] > getTokenMaxPrice(tokenId)) {
@@ -146,17 +171,20 @@ const contractParserFactory = (params) => {
           return null;
         }
 
+        purchaseBuyabletoken(tokenData);
+
         return tokenData;
       } catch (e) {
         logError(e, 'getTokenData');
         return null;
       }
-    })))
-      .filter(t => t && t.owner && t.owner !== walletAddress);
+    }));
 
+    /*
     if (!buyableTokens || !buyableTokens.length) {
       return;
     }
+    */
 
     // logMsg(buyableTokens.length, 'buyableTokensCount');
 
@@ -165,36 +193,7 @@ const contractParserFactory = (params) => {
       buyableTokens.map(e => `${e.tokenId}:${e.formattedPrice}`));
     */
 
-    await Promise.all(buyableTokens.map(async (tokenData) => {
-      const { tokenId, formattedPrice } = tokenData;
-      if (memTransactions[`${tokenId}_${formattedPrice}`]) {
-        return;
-      }
-      const transaction = await Transaction.findOne({ name, tokenId, formattedPrice });
-      if (!transaction) {
-        try {
-          memTransactions[`${tokenId}_${formattedPrice}`] = true;
-          let str = `${name} buying  token № ${tokenId} at ${tokenData.formattedPrice}`;
-          logMsg(str, 'buyToken');
-          await (new Transaction({ name, tokenId, formattedPrice })).save();
-          if (testMode) {
-            return;
-          }
-          if (await getBalance() < formattedPrice) {
-            logMsg(`insufficient funds - ${await getBalance()} of ${formattedPrice}`, 'insFunds');
-            return;
-          }
-          const txn = await buyToken(contract, tokenData);
-          logMsg(`${JSON.stringify(tokenData)}${os.EOL}${JSON.stringify(txn)}`, 'buyToken');
-        } catch (e) {
-          memTransactions[`${tokenId}_${formattedPrice}`] = false;
-          await Transaction.findOneAndRemove({ name, tokenId, formattedPrice });
-          logError(e, 'buyToken');
-        }
-      } else {
-        memTransactions[`${tokenId}_${formattedPrice}`] = true;
-      }
-    }));
+    // await Promise.all(buyableTokens.map());
   };
 };
 
