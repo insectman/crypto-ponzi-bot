@@ -78,9 +78,11 @@ const etherCitiesGrabber = require('./contracts/ether-cities');
 const etherDrugs69BlazeitGrabber = require('./contracts/etherdrugs-69blazeit');
 const cryptoPhonesGrabber = require('./contracts/crypto-phones');
 const cryptoWatchesGrabber = require('./contracts/crypto-watches');
+const cryptoAlchemyGrabber = require('./contracts/crypto-alchemy');
 
 let testMode = false;
 
+cryptoAlchemyGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 etherIslandsGrabber({ testMode, buyMaxLimitOverride: 0.11 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
