@@ -46,6 +46,7 @@ const contractParserFactory = (params) => {
   const logError = (e, fnName) => {
     const substrings = [
       'invalid address',
+      'invalid bytes'
     ];
     if (!e.responseText && !(new RegExp(substrings.join("|")).test(e.toString()))) {
       console.log(`${name} ${fnName}:`);
