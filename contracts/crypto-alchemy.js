@@ -8,7 +8,7 @@ const contractABI = JSON.parse('[{"constant":true,"inputs":[{"name":"_interfaceI
 const contractAddress = '0x548D32216D01617452892eA360bFCE9cE8dc9729';
 const buyMaxLimit = 0.015;
 const gasLimit = 130000;
-const gasPrice = 4000000;
+// const gasPrice = 3000000;
 
 const getTokensNum = async contract => (await contract.totalSupply()).toString();
 
@@ -32,7 +32,7 @@ const buyToken = async (contract, tokenData) => {
   const txn = await contract.buy(tokenId, {
     value: _price,
     gasLimit,
-    gasPrice,
+    // gasPrice,
   });
   return txn;
 };

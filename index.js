@@ -82,9 +82,9 @@ const cryptoAlchemyGrabber = require('./contracts/crypto-alchemy');
 
 let testMode = false;
 
-cryptoAlchemyGrabber({ testMode, buyMaxLimitOverride: 0.011 });
+cryptoAlchemyGrabber({ testMode, requestRate: 1500, buyMaxLimitOverride: 0.011 });
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
-etherIslandsGrabber({ testMode, buyMaxLimitOverride: 0.11 });
+etherIslandsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
 etherCitiesGrabber({ testMode, buyMaxLimitOverride: 0.019 });
 cryptoMasterpiecesGrabber({ testMode, buyMaxLimitOverride: 0.03 });

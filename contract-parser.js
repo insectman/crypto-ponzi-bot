@@ -122,7 +122,7 @@ const contractParserFactory = (params) => {
           }
           const txn = await buyToken(contract, {
             gasLimit: 200000,
-            gasPrice: 4000000,
+            // gasPrice: 4000000,
             ...tokenData,
           });
           logMsg(`${JSON.stringify(tokenData)}${os.EOL}${JSON.stringify(txn)}`, 'buyToken');
@@ -204,7 +204,7 @@ module.exports = params => (() => {
   return (options) => {
     let { requestRate } = options;
     if (!requestRate) {
-      requestRate = 750;
+      requestRate = 1000;
     }
     contractParserFn = contractParserFn.bind(null, options);
     contractParserFn();
