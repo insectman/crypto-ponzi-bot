@@ -9,11 +9,11 @@ const contractAddress = '0xf030B8fBe57c4498298449FC78A0f7054A5eF76d';
 const buyMaxLimit = 0.045;
 // const gasLimitFormatted = 290000;
 const gasLimit = 290000;
-const gasPrice = 4;
+const gasPrice = 4000000;
 // const gasUnitPrice = 4;
 
 // const gasLimit = utils.bigNumberify(gasLimitFormatted);
-// const gasPrice = utils.bigNumberify(gasLimitFormatted * gasUnitPrice);
+// const gasPrice = gasLimit * gasUnitPrice;
 
 const getTokensNum = async contract => (await contract.totalSupply()).toString();
 
