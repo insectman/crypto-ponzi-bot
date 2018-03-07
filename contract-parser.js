@@ -9,14 +9,20 @@ const contractParserFactory = (params) => {
   let tokensNum = null;
   const memTokens = {};
   const memTokensCheck = (tokenId) => {
-    if (memTokens[tokenId] && memTokens[tokenId] > getTokenMaxPrice(tokenId)) {
+    if(!memTokens[tokenId]) {
+      return true;
+    }
+    if (memTokens[tokenId] > getTokenMaxPrice(tokenId) || memTokens[tokenId] < buyMinLimit) {
       return false;
     }
     return true;
   }
   const memTransactions = {};
   // let requestNum = 0;
-  let { buyMaxLimit } = params;
+  let { buyMaxLimit, buyMinLimit } = params;
+  if(!buyMinLimit) {
+    buyMinLimit = 0;
+  }
   const {
     contractAddress,
     contractABI,
@@ -167,7 +173,7 @@ const contractParserFactory = (params) => {
         if(!memTokensCheck(tokenId)) {
           return null;
         }
-        
+
         const formattedPrice = +tokenData.formattedPrice;
         memTokens[tokenId] = formattedPrice;
         dbToken = await Token.findOne({ name, tokenId });
