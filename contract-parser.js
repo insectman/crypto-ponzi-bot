@@ -109,6 +109,9 @@ const contractParserFactory = (params) => {
       const transaction = await Transaction.findOne({ name, tokenId, formattedPrice });
       if (!transaction) {
         try {
+          if (memTransactions[`${tokenId}_${formattedPrice}`]) {
+            return;
+          }
           memTransactions[`${tokenId}_${formattedPrice}`] = true;
           let str = `${name} buying  token № ${tokenId} at ${tokenData.formattedPrice}`;
           logMsg(str, 'buyToken');
