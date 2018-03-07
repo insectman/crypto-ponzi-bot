@@ -26,20 +26,25 @@ const gasPrice = 4000000;
 
 (async () => {
 
-
-const txn = await contract.buy(69, {
-    value: utils.parseEther('0.001'),
-    gasLimit,
-    // gasPrice,
-  });
-
+  /*
+    const txn = await contract.buy(69, {
+      value: utils.parseEther('0.001'),
+      gasLimit,
+      // gasPrice,
+    });
+  */
   // await Transaction.deleteMany({ name: 'metaquazr' });
   // await Transaction.deleteMany({});
   // await Transaction.deleteMany({ name: 'cryptophones' });
-  console.log(txn);
-  console.log('ok');
+  // console.log(txn);
+  // console.log('ok');
   // await Transaction.deleteMany({ name: 'cryptomayor' });
 
+  const commands = {};
+  commands['uuu'] = true;
+  console.log(commands);
+  delete commands['uuu'];
+  console.log(commands);
   // const total = await _contract.totalSupply();
 
   // const tokensCnt = await Token.count({});

@@ -19,6 +19,7 @@ const { MONGODB_URI } = process.env;
 
 mongoose.connect(MONGODB_URI);
 
+// const commands = {};
 
 app.use('/deltxns', async (req, res) => {
   const { nm } = req.query
@@ -27,6 +28,7 @@ app.use('/deltxns', async (req, res) => {
   };
   const transactionsCnt = await Transaction.count({ name: nm });
   await Transaction.deleteMany({ name: nm });
+  // commands[`deltxns-${nm}`] = true;
   res.send(`Found & deleted ${transactionsCnt} transactions named ${nm}`);
 })
 
@@ -92,7 +94,7 @@ const cryptoAlchemyGrabber = require('./contracts/crypto-alchemy');
 
 let testMode = false;
 
-cryptoAlchemyGrabber({ testMode, requestRate: 1500, buyMaxLimitOverride: 0.011 });
+cryptoAlchemyGrabber({ testMode, requestRate: 3000, buyMaxLimitOverride: 0.011 });
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 etherIslandsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
