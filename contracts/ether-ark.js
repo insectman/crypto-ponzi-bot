@@ -9,6 +9,7 @@ const contractAddress = '0xf030B8fBe57c4498298449FC78A0f7054A5eF76d';
 const buyMaxLimit = 0.045;
 // const gasLimitFormatted = 290000;
 const gasLimit = 290000;
+const gasPrice = 4;
 // const gasUnitPrice = 4;
 
 // const gasLimit = utils.bigNumberify(gasLimitFormatted);
@@ -36,7 +37,7 @@ const buyToken = async (contract, tokenData) => {
   const txn = await contract.buyToken(tokenId, {
     value: _price,
     gasLimit,
-    // gasPrice,
+    gasPrice,
   });
   return txn;
 };

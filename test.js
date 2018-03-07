@@ -17,11 +17,11 @@ const contractAddress = '0xf030B8fBe57c4498298449FC78A0f7054A5eF76d';
 const contract = new ethers.Contract(contractAddress, contractABI, myWallet);
 
 // const gasLimitFormatted = 290000;
-const gasUnitPrice = 4;
+// const gasUnitPrice = 4;
 
 // const gasLimit = utils.bigNumberify(gasLimitFormatted);
 const gasLimit = 290000;
-const gasPrice = utils.bigNumberify(gasLimit * gasUnitPrice);
+const gasPrice = 4;
 
 
 (async () => {
@@ -29,7 +29,7 @@ const gasPrice = utils.bigNumberify(gasLimit * gasUnitPrice);
   await contract.buyToken(157, {
     value: utils.parseEther('0.01'),
     gasLimit,
-    // gasPrice,
+    gasPrice,
   });
 
   // await Transaction.deleteMany({ name: 'metaquazr' });
