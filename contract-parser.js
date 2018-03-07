@@ -9,7 +9,7 @@ const contractParserFactory = (params) => {
   let tokensNum = null;
   const memTokens = {};
   const memTokensCheck = (tokenId) => {
-    if(!memTokens[tokenId]) {
+    if (!memTokens[tokenId]) {
       return true;
     }
     if (memTokens[tokenId] > getTokenMaxPrice(tokenId) || memTokens[tokenId] < buyMinLimit) {
@@ -20,7 +20,7 @@ const contractParserFactory = (params) => {
   const memTransactions = {};
   // let requestNum = 0;
   let { buyMaxLimit, buyMinLimit } = params;
-  if(!buyMinLimit) {
+  if (!buyMinLimit) {
     buyMinLimit = 0;
   }
   const {
@@ -44,9 +44,12 @@ const contractParserFactory = (params) => {
   }
 
   const logError = (e, fnName) => {
-    if (!e.responseText) {
+    const substrings = [
+      'invalid address',
+    ];
+    if (!e.responseText && !(new RegExp(substrings.join("|")).test(string))) {
       console.log(`${name} ${fnName}:`);
-      console.log(e);
+      console.log(e.toString().includes('invalid address'));
     }
     fs.appendFileSync(errorLogFile, `${fnName}:`);
     fs.appendFileSync(errorLogFile, os.EOL);
@@ -161,7 +164,7 @@ const contractParserFactory = (params) => {
           }
         }
 
-        if(!memTokensCheck(tokenId)) {
+        if (!memTokensCheck(tokenId)) {
           return null;
         }
 
@@ -170,7 +173,7 @@ const contractParserFactory = (params) => {
           console.log('getTokenData:', tokenData);
         }
 
-        if(!memTokensCheck(tokenId)) {
+        if (!memTokensCheck(tokenId)) {
           return null;
         }
 
@@ -178,7 +181,7 @@ const contractParserFactory = (params) => {
         memTokens[tokenId] = formattedPrice;
         dbToken = await Token.findOne({ name, tokenId });
 
-        if(!memTokensCheck(tokenId)) {
+        if (!memTokensCheck(tokenId)) {
           return null;
         }
 
@@ -195,7 +198,7 @@ const contractParserFactory = (params) => {
           await dbToken.save();
         }
 
-        if(!memTokensCheck(tokenId)) {
+        if (!memTokensCheck(tokenId)) {
           return null;
         }
 
