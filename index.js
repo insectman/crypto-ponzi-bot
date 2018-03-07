@@ -32,6 +32,16 @@ app.use('/deltxns', async (req, res) => {
   res.send(`Found & deleted ${transactionsCnt} transactions named ${nm}`);
 })
 
+app.use('/deltkns', async (req, res) => {
+  const { nm } = req.query
+  if (!nm) {
+    res.send('invalid params')
+  };
+  const tokensCnt = await Token.count({ name: nm });
+  await Token.deleteMany({ name: nm });
+  res.send(`Found & deleted ${tokensCnt} transactions named ${nm}`);
+})
+
 app.use('/', express.static('logs'), serveIndex('logs', { 'icons': true }))
 app.listen(process.env.PORT || 3000)
 
@@ -100,7 +110,7 @@ etherIslandsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
 etherCitiesGrabber({ testMode, buyMaxLimitOverride: 0.019 });
 cryptoMasterpiecesGrabber({ testMode, buyMaxLimitOverride: 0.03 });
-cryptocitiEsGrabber({ testMode });
+// cryptocitiEsGrabber({ testMode });
 etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
 etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoPhonesGrabber({ testMode, buyMaxLimitOverride: 0.011 });

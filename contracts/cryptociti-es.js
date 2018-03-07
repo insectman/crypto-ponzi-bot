@@ -10,6 +10,35 @@ const buyMaxLimit = 0.16;
 // const buyMaxLimit = 0.529;
 const getTokensNum = async contract => (await contract.totalSupply()).toString();
 
+const getTokenIds = async contract => {
+
+  const maxCity = await Token.findOne({
+    tokenId: { $lte: 999 },
+  })
+    .sort('-tokenId')
+    .exec();
+
+  const maxCountry = await Token.findOne({
+    tokenId: { $gt: 999 },
+  })
+    .sort('-tokenId')
+    .exec();
+
+  let maxCityId = maxCity ? maxCity.tokenId : 0;
+  let maxCountryId = maxCountry ? maxCountry.tokenId : 999;
+
+  let td = await contract.getToken(maxCityId + 1);
+  if (td.cityName.length) {
+    maxCityId = maxCityId + 1;
+  }
+  td = await contract.getToken(maxCountryId + 1);
+  if (td.tokenName.length) {
+    maxCountryId = maxCityId + 1;
+  }
+
+  return Array.from({ length: maxCityId }, (x, i) => i);
+};
+
 const getTokenMaxPrice = (tokenId) => {
   if (tokenId > 999) {
     return 0.4;
