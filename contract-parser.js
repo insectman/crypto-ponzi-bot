@@ -47,9 +47,9 @@ const contractParserFactory = (params) => {
     const substrings = [
       'invalid address',
     ];
-    if (!e.responseText && !(new RegExp(substrings.join("|")).test(string))) {
+    if (!e.responseText && !(new RegExp(substrings.join("|")).test(e.toString()))) {
       console.log(`${name} ${fnName}:`);
-      console.log(e.toString().includes('invalid address'));
+      console.log(e);
     }
     fs.appendFileSync(errorLogFile, `${fnName}:`);
     fs.appendFileSync(errorLogFile, os.EOL);
