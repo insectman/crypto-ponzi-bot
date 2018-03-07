@@ -20,6 +20,16 @@ const { MONGODB_URI } = process.env;
 mongoose.connect(MONGODB_URI);
 
 
+app.use('/deltxns', async (req, res) => {
+  const { nm } = req.query
+  if (!nm) {
+    res.send('invalid params')
+  };
+  const transactionsCnt = await Transaction.count({ name: nm });
+  await Transaction.deleteMany({ name: nm });
+  res.send(`Found & deleted ${transactionsCnt} transactions named ${nm}`);
+})
+
 app.use('/', express.static('logs'), serveIndex('logs', { 'icons': true }))
 app.listen(process.env.PORT || 3000)
 
@@ -81,7 +91,7 @@ const cryptoWatchesGrabber = require('./contracts/crypto-watches');
 const cryptoAlchemyGrabber = require('./contracts/crypto-alchemy');
 
 let testMode = false;
-
+/*
 cryptoAlchemyGrabber({ testMode, requestRate: 1500, buyMaxLimitOverride: 0.011 });
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 etherIslandsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
@@ -94,7 +104,7 @@ etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoPhonesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoWatchesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.063 });
-
+*/
 testMode = true;
 
 
