@@ -121,6 +121,13 @@ const contractParserFactory = (params) => {
             return;
           }
           const txn = await buyToken(contract, tokenData);
+          /*
+          const txn = await buyToken(contract, {
+            ...tokenData,
+            gasLimit: utils.bigNumberify("90000"),
+            gasPrice: utils.bigNumberify("21488430592"),
+          });
+          */
           logMsg(`${JSON.stringify(tokenData)}${os.EOL}${JSON.stringify(txn)}`, 'buyToken');
         } catch (e) {
           memTransactions[`${tokenId}_${formattedPrice}`] = false;
