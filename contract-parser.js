@@ -204,7 +204,7 @@ module.exports = params => (() => {
   return (options) => {
     let { requestRate } = options;
     if (!requestRate) {
-      requestRate = 500;
+      requestRate = 750;
     }
     contractParserFn = contractParserFn.bind(null, options);
     contractParserFn();
