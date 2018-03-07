@@ -8,6 +8,12 @@ const os = require('os');
 const contractParserFactory = (params) => {
   let tokensNum = null;
   const memTokens = {};
+  const memTokensCheck = (tokenId) => {
+    if (memTokens[tokenId] && memTokens[tokenId] > getTokenMaxPrice(tokenId)) {
+      return false;
+    }
+    return true;
+  }
   const memTransactions = {};
   // let requestNum = 0;
   let { buyMaxLimit } = params;
@@ -149,8 +155,7 @@ const contractParserFactory = (params) => {
           }
         }
 
-        if (memTokens[tokenId]
-          && memTokens[tokenId] > getTokenMaxPrice(tokenId)) {
+        if(!memTokensCheck(tokenId)) {
           return null;
         }
 
@@ -158,9 +163,19 @@ const contractParserFactory = (params) => {
         if (debugOn) {
           console.log('getTokenData:', tokenData);
         }
+
+        if(!memTokensCheck(tokenId)) {
+          return null;
+        }
+        
         const formattedPrice = +tokenData.formattedPrice;
         memTokens[tokenId] = formattedPrice;
         dbToken = await Token.findOne({ name, tokenId });
+
+        if(!memTokensCheck(tokenId)) {
+          return null;
+        }
+
         if (!dbToken) {
           await (new Token({
             name,
@@ -174,7 +189,7 @@ const contractParserFactory = (params) => {
           await dbToken.save();
         }
 
-        if (formattedPrice > getTokenMaxPrice(tokenId)) {
+        if(!memTokensCheck(tokenId)) {
           return null;
         }
 
