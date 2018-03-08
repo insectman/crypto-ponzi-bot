@@ -115,7 +115,7 @@ etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
 etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoPhonesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoWatchesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
-etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.063 });
+etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.06 });
 
 testMode = true;
 
