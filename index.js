@@ -108,7 +108,7 @@ cryptoAlchemyGrabber({ testMode, requestRate: 3000, buyMaxLimitOverride: 0.011 }
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 etherIslandsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
-etherCitiesGrabber({ testMode, buyMaxLimitOverride: 0.019 });
+etherCitiesGrabber({ testMode, buyMaxLimitOverride: 0.017 });
 cryptoMasterpiecesGrabber({ testMode, buyMaxLimitOverride: 0.03 });
 // cryptocitiEsGrabber({ testMode });
 etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
