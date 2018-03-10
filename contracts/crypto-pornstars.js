@@ -9,6 +9,8 @@ const contractAddress = '0x286e052bc8250250566683424001ee5224867d91';
 const buyMaxLimit = 0.21;
 // const buyMaxLimit = 0.529;
 
+const gasLimit = 200000;
+
 const getTokensNum = async contract => (await contract.totalSupply()).toString();
 
 const getTokenData = async (params) => {
@@ -34,7 +36,9 @@ const buyToken = async (contract, tokenData) => {
   console.log(m2p);
   */
   const txn = await contract.purchase(tokenId, {
-    value: sellingPrice,
+    //value: sellingPrice,
+    value: utils.parseEther(buyMaxLimit.toString()),
+    gasLimit
   });
   return txn;
 };
