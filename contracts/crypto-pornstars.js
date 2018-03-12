@@ -11,7 +11,12 @@ const buyMaxLimit = 0.21;
 
 const gasLimit = 200000;
 
-const getTokensNum = async contract => (await contract.totalSupply()).toString();
+
+const ownerVarName = 'owner';
+const priceVarName = 'sellingPrice';
+// const getTokensNum = async contract => (await contract.totalSupply()).toString();
+
+/*
 
 const getTokenData = async (params) => {
   const { tokenId, contract } = params;
@@ -27,14 +32,10 @@ const getTokenData = async (params) => {
   };
 };
 
-const buyToken = async (contract, tokenData) => {
+
+const buyTokenTxn = async (contract, tokenData, options) => {
   const { tokenId, sellingPrice } = tokenData;
-  /*
-  const m2p = contract.masterpieceToPrice(tokenId);
-  console.log(+utils.formatEther(m2p));
-  console.log(sellingPrice);
-  console.log(m2p);
-  */
+
   const txn = await contract.purchase(tokenId, {
     //value: sellingPrice,
     value: utils.parseEther(buyMaxLimit.toString()),
@@ -42,17 +43,30 @@ const buyToken = async (contract, tokenData) => {
   });
   return txn;
 };
+*/
 
+const buyTokenFnName = 'purchase';
+const getTokenDataFnName = 'getPerson';
+
+/*
 const funcs = {
   getTokenData,
   getTokensNum,
   buyToken,
 };
+*/
+
+const funcs = {};
 
 module.exports = contractParser({
   contractAddress,
   contractABI,
   funcs,
+  buyTokenFnName,
+  getTokenDataFnName,
+  gasLimit,
   name: 'cryptopornstars',
   buyMaxLimit,
+  ownerVarName,
+  priceVarName,
 });

@@ -5,6 +5,8 @@ const Token = require('./token.model');
 const fs = require('fs');
 const os = require('os');
 
+const { utils } = ethers;
+
 const contractParserFactory = (params) => {
   let tokensNum = null;
   const memTokens = {};
@@ -29,6 +31,13 @@ const contractParserFactory = (params) => {
     name,
     funcs,
     badTokenIds,
+    buyTokenFnName,
+    getTokenDataFnName,
+  } = params;
+  let {
+    ownerVarName,
+    priceVarName,
+    gasLimit,
   } = params;
   const logFile = `./logs/${name}.log`;
   const errorLogFile = `./logs/${name}.error.log`;
@@ -81,9 +90,12 @@ const contractParserFactory = (params) => {
     let buyableTokens;
     let newTokensNum;
     try {
-      newTokensNum = +(await getTokensNum(contract));
+      if (getTokensNum) {
+        newTokensNum = +(await getTokensNum(contract));
+      } else {
+        newTokensNum = +(await contract.totalSupply()).toString();
+      }
     } catch (e) {
-      // console.log(e);
       logError(e, 'getTokensNum');
       return;
     }
@@ -139,11 +151,18 @@ const contractParserFactory = (params) => {
             logMsg(`insufficient funds - ${await getBalance()} of ${formattedPrice}`, 'insFunds');
             return;
           }
-          const txn = await buyToken(contract, {
-            gasLimit: 200000,
-            // gasPrice: 4000000,
-            ...tokenData,
+
+          if (!gasLimit) {
+            gasLimit = 200000;
+          }
+
+          const txn = await contract[buyTokenFnName](tokenId, {
+            //value: sellingPrice,
+            value: utils.parseEther(getTokenMaxPrice(tokenId).toString()),
+            gasLimit,
           });
+
+
           logMsg(`${JSON.stringify(tokenData)}${os.EOL}${JSON.stringify(txn)}`, 'buyToken');
         } catch (e) {
           memTransactions[`${tokenId}_${formattedPrice}`] = false;
@@ -169,7 +188,31 @@ const contractParserFactory = (params) => {
           return null;
         }
 
-        const tokenData = await getTokenData({ tokenId, contract });
+        let tokenData;
+        if (getTokenData) {
+          tokenData = await getTokenData({ tokenId, contract });
+        } else {
+          tokenData = await contract[getTokenDataFnName](tokenId);
+
+          if (!ownerVarName) {
+            ownerVarName = 'owner';
+          }
+          if (!priceVarName) {
+            priceVarName = 'sellingPrice';
+          }
+
+          const price = tokenData[priceVarName]._bn;
+          const owner = tokenData[ownerVarName];
+          const formattedPrice = +utils.formatEther(price);
+          tokenData = {
+            ...tokenData,
+            price,
+            owner,
+            formattedPrice,
+            tokenId,
+          }
+        }
+
         if (debugOn) {
           console.log('getTokenData:', tokenData);
         }
@@ -210,20 +253,6 @@ const contractParserFactory = (params) => {
       }
     }));
 
-    /*
-    if (!buyableTokens || !buyableTokens.length) {
-      return;
-    }
-    */
-
-    // logMsg(buyableTokens.length, 'buyableTokensCount');
-
-    /*
-    console.log(name, buyableTokens.length, tokenIds.length,
-      buyableTokens.map(e => `${e.tokenId}:${e.formattedPrice}`));
-    */
-
-    // await Promise.all(buyableTokens.map());
   };
 };
 
