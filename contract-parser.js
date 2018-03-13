@@ -14,7 +14,7 @@ const contractParserFactory = (params) => {
     if (!memTokens[tokenId]) {
       return true;
     }
-    if (memTokens[tokenId] > getTokenMaxPrice(tokenId) || memTokens[tokenId] < buyMinLimit) {
+    if (memTokens[tokenId] > getTokenMaxPrice(tokenId) || memTokens[tokenId] <= buyMinLimit) {
       return false;
     }
     return true;
@@ -127,6 +127,7 @@ const contractParserFactory = (params) => {
     }
 
     const purchaseBuyabletoken = async (tokenData) => {
+
       if (!tokenData.owner || tokenData.owner === walletAddress) {
         return;
       }
@@ -141,7 +142,7 @@ const contractParserFactory = (params) => {
             return;
           }
           memTransactions[`${tokenId}_${formattedPrice}`] = true;
-          let str = `${name} buying  token № ${tokenId} at ${tokenData.formattedPrice}`;
+          let str = `${name} buying token № ${tokenId} at ${tokenData.formattedPrice}`;
           logMsg(str, 'buyToken');
           await (new Transaction({ name, tokenId, formattedPrice })).save();
           if (testMode) {
@@ -173,6 +174,11 @@ const contractParserFactory = (params) => {
         memTransactions[`${tokenId}_${formattedPrice}`] = true;
       }
     }
+
+    /*
+    const dbTokens = await Token.find({ name });
+    dbTokens.forEach()
+    */
 
     await Promise.all(tokenIds.map(async (tokenId) => {
       let dbToken = null;

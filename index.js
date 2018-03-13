@@ -39,7 +39,7 @@ app.use('/deltkns', async (req, res) => {
   };
   const tokensCnt = await Token.count({ name: nm });
   await Token.deleteMany({ name: nm });
-  res.send(`Found & deleted ${tokensCnt} transactions named ${nm}`);
+  res.send(`Found & deleted ${tokensCnt} tokens named ${nm}`);
 })
 
 app.use('/', express.static('logs'), serveIndex('logs', { 'icons': true }))
@@ -102,6 +102,7 @@ const cryptoWatchesGrabber = require('./contracts/crypto-watches');
 const cryptoAlchemyGrabber = require('./contracts/crypto-alchemy');
 
 const cryptoPornstarsScenesGrabber = require('./contracts/crypto-pornstars-scenes');
+const etherNaughtsShipsGrabber = require('./contracts/ether-naughts-ships');
 
 let testMode = false;
 
@@ -110,11 +111,10 @@ let testMode = false;
 /*
 cryptoAlchemyGrabber({ testMode, requestRate: 3000, buyMaxLimitOverride: 0.011 });
 etherIslandsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
-mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
 etherCitiesGrabber({ testMode, buyMaxLimitOverride: 0.017 });
 cryptoMasterpiecesGrabber({ testMode, buyMaxLimitOverride: 0.03 });
-// cryptocitiEsGrabber({ testMode });
 etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
+// cryptocitiEsGrabber({ testMode });
 etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoPhonesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoWatchesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
@@ -125,6 +125,9 @@ etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.06 });
 
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.21 });
 cryptoPornstarsScenesGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
+etherNaughtsShipsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.021 });
+mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
+etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.03 });
 
 /*
 // cryptoHeroGrabber({ testMode, buyMaxLimitOverride: 0.005 });
