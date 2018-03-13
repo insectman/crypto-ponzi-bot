@@ -110,7 +110,6 @@ let testMode = false;
 
 /*
 cryptoAlchemyGrabber({ testMode, requestRate: 3000, buyMaxLimitOverride: 0.011 });
-etherIslandsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 etherCitiesGrabber({ testMode, buyMaxLimitOverride: 0.017 });
 cryptoMasterpiecesGrabber({ testMode, buyMaxLimitOverride: 0.03 });
 etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
@@ -128,6 +127,7 @@ cryptoPornstarsScenesGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 
 etherNaughtsShipsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.021 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
 etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.03 });
+etherIslandsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 
 /*
 // cryptoHeroGrabber({ testMode, buyMaxLimitOverride: 0.005 });
