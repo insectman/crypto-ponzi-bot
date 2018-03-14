@@ -114,7 +114,6 @@ etherCitiesGrabber({ testMode, buyMaxLimitOverride: 0.017 });
 cryptoMasterpiecesGrabber({ testMode, buyMaxLimitOverride: 0.03 });
 etherDrugs69BlazeitGrabber({ testMode, buyMaxLimitOverride: 0.009 });
 // cryptocitiEsGrabber({ testMode });
-etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoPhonesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 cryptoWatchesGrabber({ testMode, buyMaxLimitOverride: 0.011 });
 etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.06 });
@@ -128,6 +127,7 @@ etherNaughtsShipsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.02
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
 etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.03 });
 etherIslandsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
+etherAthletesGrabber({ testMode, buyMaxLimitOverride: 0.021 });
 
 /*
 // cryptoHeroGrabber({ testMode, buyMaxLimitOverride: 0.005 });
