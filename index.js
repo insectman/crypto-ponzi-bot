@@ -122,7 +122,7 @@ etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.06 });
 // testMode = true;
 
 cryptoPornstarsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.21 });
-cryptoPornstarsScenesGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.14 });
+cryptoPornstarsScenesGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.11 });
 etherNaughtsShipsGrabber({ testMode, requestRate: 500, buyMaxLimitOverride: 0.021 });
 mobSquadsGrabber({ testMode, buyMaxLimitOverride: 0.025 });
 etherArkGrabber({ testMode, debugOn: false, buyMaxLimitOverride: 0.03 });
