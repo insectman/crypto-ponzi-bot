@@ -20,6 +20,7 @@ const getTokenData = async (params) => {
   const { tokenId, contract } = params;
   const tokenData = {};
   const sellingPrice = (await contract.getCurrentPrice(tokenId))[0];
+  console.log('---');
   const price = sellingPrice._bn;
   let owner;
   const formattedPrice = +utils.formatEther(price);

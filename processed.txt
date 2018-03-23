@@ -1,0 +1,1305 @@
+Statistical profiling result from isolate-000000399C206E40-v8.log, (29342 ticks, 591 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  18585   63.3%          C:\Program Files (x86)\nodejs\node.exe
+   3267   11.1%          C:\WINDOWS\SYSTEM32\ntdll.dll
+     35    0.1%          C:\WINDOWS\system32\KERNEL32.DLL
+     27    0.1%          C:\WINDOWS\system32\KERNELBASE.dll
+      9    0.0%          C:\WINDOWS\system32\WS2_32.dll
+      3    0.0%          C:\WINDOWS\system32\mswsock.dll
+      1    0.0%          C:\WINDOWS\SYSTEM32\WINMM.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    895    3.1%   12.1%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:452:18
+    273    0.9%    3.7%  LazyCompile: *f C:\node\cryptodev\node_modules\js-sha3\src\sha3.js:283:20
+    201    0.7%    2.7%  LoadIC: A load IC from the snapshot
+    189    0.6%    2.5%  Builtin: KeyedStoreIC_Megamorphic_Strict
+    176    0.6%    2.4%  Builtin: KeyedLoadIC_Megamorphic
+    149    0.5%    2.0%  Builtin: InterpreterEntryTrampoline
+    142    0.5%    1.9%  StoreIC: A store IC from the snapshot
+    135    0.5%    1.8%  Builtin: CallFunction_ReceiverIsAny
+    103    0.4%    1.4%  Builtin: FastNewClosure
+     98    0.3%    1.3%  KeyedLoadIC: A keyed load IC from the snapshot
+     94    0.3%    1.3%  Stub: StringAddStub
+     86    0.3%    1.2%  LazyCompile: *getChecksumAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:8:28
+     76    0.3%    1.0%  Builtin: RegExpPrototypeMatch
+     68    0.2%    0.9%  Builtin: StringPrototypeSubstr
+     61    0.2%    0.8%  Builtin: ArgumentsAdaptorTrampoline
+     58    0.2%    0.8%  Builtin: FastArrayPush
+     57    0.2%    0.8%  Stub: GetPropertyStub
+     55    0.2%    0.7%  LazyCompile: *parse url.js:101:37
+     52    0.2%    0.7%  Function: ~createSecureContext _tls_common.js:57:59
+     51    0.2%    0.7%  KeyedStoreIC: A keyed store IC from the snapshot
+     48    0.2%    0.6%  Function: ~getAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:77:20
+     47    0.2%    0.6%  Builtin: CompileLazy
+     45    0.2%    0.6%  Stub: CallICStub
+     45    0.2%    0.6%  Stub: CEntryStub
+     43    0.1%    0.6%  Function: ~cast C:\node\cryptodev\node_modules\mongoose\lib\cast.js:21:31
+     39    0.1%    0.5%  LazyCompile: *Keccak.update C:\node\cryptodev\node_modules\js-sha3\src\sha3.js:111:38
+     38    0.1%    0.5%  Function: ~stringSlice buffer.js:553:21
+     37    0.1%    0.5%  LazyCompile: *deserializeObject C:\node\cryptodev\node_modules\bson\lib\bson\parser\deserializer.js:39:33
+     37    0.1%    0.5%  LazyCompile: *Uint8ArrayConstructByIterable native typedarray.js:127:39
+     36    0.1%    0.5%  Builtin: StringCharCodeAt
+     35    0.1%    0.5%  Function: ~byteLength buffer.js:473:20
+     34    0.1%    0.5%  LazyCompile: *ClientRequest _http_client.js:79:23
+     34    0.1%    0.5%  Function: ~Socket.connect net.js:977:36
+     32    0.1%    0.4%  RegExp: ^0x[0-9A-Fa-f]*$
+     32    0.1%    0.4%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1394:25
+     31    0.1%    0.4%  Function: ~autoEscapeStr url.js:442:23
+     30    0.1%    0.4%  KeyedLoadIC: A keyed load IC from the snapshot {1}
+     30    0.1%    0.4%  Builtin: JSConstructStubGenericUnrestrictedReturn
+     30    0.1%    0.4%  Builtin: GrowFastSmiOrObjectElements
+     28    0.1%    0.4%  Function: ~match native string.js:12:6
+     27    0.1%    0.4%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1394:25
+     26    0.1%    0.4%  RegExp: ^0x[0-9A-Fa-f]{40}$
+     25    0.1%    0.3%  Stub: StringAddStub {1}
+     25    0.1%    0.3%  RegExp: ^(0x)?[0-9a-fA-F]{40}$
+     25    0.1%    0.3%  LazyCompile: *DoJoin native array.js:95:16
+     25    0.1%    0.3%  LazyCompile: *Agent _http_agent.js:43:15
+     24    0.1%    0.3%  LazyCompile: *exports.connect _tls_wrap.js:1018:27
+     24    0.1%    0.3%  Builtin: Call_ReceiverIsAny
+     24    0.1%    0.3%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+     23    0.1%    0.3%  Function: ~Buffer.write buffer.js:850:34
+     23    0.1%    0.3%  Builtin: FastNewObject
+     22    0.1%    0.3%  Function: ~serializeInto C:\node\cryptodev\node_modules\bson\lib\bson\parser\serializer.js:574:43
+     22    0.1%    0.3%  Builtin: StringPrototypeSlice
+     22    0.1%    0.3%  Builtin: PromiseThen
+     22    0.1%    0.3%  Builtin: Add {1}
+     21    0.1%    0.3%  LazyCompile: *serializeInto C:\node\cryptodev\node_modules\bson\lib\bson\parser\serializer.js:574:43
+     21    0.1%    0.3%  Builtin: ObjectKeys
+     21    0.1%    0.3%  Builtin: LoadICProtoArray
+     21    0.1%    0.3%  Builtin: FastCloneRegExp
+     20    0.1%    0.3%  LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+     20    0.1%    0.3%  LazyCompile: *Socket._writeGeneric net.js:708:42
+     20    0.1%    0.3%  Builtin: StringPrototypeSubstring
+     20    0.1%    0.3%  Builtin: RegExpPrototypeExec
+     20    0.1%    0.3%  Builtin: PromiseHandle
+     19    0.1%    0.3%  Stub: CEntryStub {1}
+     19    0.1%    0.3%  LazyCompile: *send C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:267:23
+     19    0.1%    0.3%  LazyCompile: *addRequest _http_agent.js:140:49
+     19    0.1%    0.3%  Function: ~SchemaNumber.cast C:\node\cryptodev\node_modules\mongoose\lib\schema\number.js:172:39
+     19    0.1%    0.3%  Builtin: TypedArrayInitialize
+     19    0.1%    0.3%  Builtin: ArrayIndexOf
+     18    0.1%    0.2%  LoadIC: A load IC from the snapshot {1}
+     18    0.1%    0.2%  KeyedStoreIC: A keyed store IC from the snapshot {1}
+     18    0.1%    0.2%  Builtin: StringEqual
+     18    0.1%    0.2%  Builtin: ForInPrepare {1}
+     17    0.1%    0.2%  Function: ~next C:\node\cryptodev\node_modules\ethers-providers\fallback-provider.js:44:22
+     17    0.1%    0.2%  Builtin: NumberParseInt
+     16    0.1%    0.2%  LazyCompile: *isArrayish C:\node\cryptodev\node_modules\ethers-utils\convert.js:20:20
+     16    0.1%    0.2%  LazyCompile: *func C:\node\cryptodev\node_modules\ethers-contracts\interface.js:624:40
+     16    0.1%    0.2%  LazyCompile: *emit events.js:156:44
+     16    0.1%    0.2%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:110:68
+     16    0.1%    0.2%  Builtin: LoadIC_Noninlined
+     16    0.1%    0.2%  Builtin: HasProperty
+     16    0.1%    0.2%  Builtin: FunctionPrototypeHasInstance
+     15    0.1%    0.2%  LazyCompile: *arrayify C:\node\cryptodev\node_modules\ethers-utils\convert.js:35:18
+     15    0.1%    0.2%  LazyCompile: *Collection.find C:\node\cryptodev\node_modules\mongodb\lib\collection.js:233:37
+     15    0.1%    0.2%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+     15    0.1%    0.2%  Builtin: ArrayForEach
+     14    0.0%    0.2%  LazyCompile: *lookupAndConnect net.js:1034:26
+     14    0.0%    0.2%  LazyCompile: *exports.XMLHttpRequest C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:18:34
+     14    0.0%    0.2%  LazyCompile: *Socket net.js:175:16
+     14    0.0%    0.2%  LazyCompile: *Cursor C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:101:22
+     14    0.0%    0.2%  Builtin: StringToLowerCaseIntl
+     13    0.0%    0.2%  Stub: CallApiGetterStub
+     13    0.0%    0.2%  LazyCompile: *keccak256 C:\node\cryptodev\node_modules\ethers-utils\keccak256.js:7:19
+     13    0.0%    0.2%  Function: ~Query.merge C:\node\cryptodev\node_modules\mongoose\lib\query.js:1380:33
+     13    0.0%    0.2%  Function: ~Keccak.update C:\node\cryptodev\node_modules\js-sha3\src\sha3.js:111:38
+     13    0.0%    0.2%  Builtin: StrictEqual
+     12    0.0%    0.2%  RegExp: ([A-F].*[a-f])|([a-f].*[A-F])
+     12    0.0%    0.2%  LazyCompile: *executeFindCommand C:\node\cryptodev\node_modules\mongodb-core\lib\wireprotocol\3_2_support.js:362:34
+     12    0.0%    0.2%  LazyCompile: *TLSSocket _tls_wrap.js:265:19
+     12    0.0%    0.2%  LazyCompile: *Readable.read _stream_readable.js:365:35
+     12    0.0%    0.2%  LazyCompile: *ConvertToString native array.js:133:25
+     12    0.0%    0.2%  LazyCompile: *Collection.findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1339:40
+     12    0.0%    0.2%  Function: ~handleSocketCreation_Inner _http_agent.js:331:45
+     12    0.0%    0.2%  Function: ~UseSparseVariant native array.js:62:26
+     12    0.0%    0.2%  Builtin: ToString
+     11    0.0%    0.1%  LazyCompile: *autoEscapeStr url.js:442:23
+     11    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:549:54
+     11    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:452:18
+     11    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\etherscan-provider.js:107:70
+     11    0.0%    0.1%  Builtin: PromiseResolve
+     11    0.0%    0.1%  Builtin: ClassOf
+     11    0.0%    0.1%  Builtin: CallFunction_ReceiverIsNotNullOrUndefined
+     10    0.0%    0.1%  RegExp: ^(?:Connection|Transfer-Encoding|Content-Length|Date|Expect|Trailer|Upgrade)$
+     10    0.0%    0.1%  LazyCompile: *nextTick internal/process/next_tick.js:245:20
+     10    0.0%    0.1%  LazyCompile: *findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1348:23
+     10    0.0%    0.1%  LazyCompile: *_extend util.js:983:17
+     10    0.0%    0.1%  LazyCompile: *Promise.all.tokenIds.map C:\node\cryptodev\contract-parser.js:183:36
+     10    0.0%    0.1%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:842:65
+     10    0.0%    0.1%  Function: ~normalizeConnectArgs _tls_wrap.js:999:30
+     10    0.0%    0.1%  Function: ~b native typedarray.js:990:48
+     10    0.0%    0.1%  Function: ~Promise.all.tokenIds.map C:\node\cryptodev\contract-parser.js:183:36
+     10    0.0%    0.1%  Function: ~Pool.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1098:32
+     10    0.0%    0.1%  Builtin: StringPrototypeCharCodeAt
+     10    0.0%    0.1%  Builtin: KeyedStoreIC_Megamorphic
+      9    0.0%    0.1%  LazyCompile: *clearBuffer _stream_writable.js:469:21
+      9    0.0%    0.1%  LazyCompile: *addListener events.js:296:58
+      9    0.0%    0.1%  LazyCompile: *_flush _http_outgoing.js:816:51
+      9    0.0%    0.1%  LazyCompile: *WritableState _stream_writable.js:41:23
+      9    0.0%    0.1%  LazyCompile: *Query.toBin C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:89:33
+      9    0.0%    0.1%  LazyCompile: *Module.require module.js:576:36
+      9    0.0%    0.1%  Function: ~deserializeObject C:\node\cryptodev\node_modules\bson\lib\bson\parser\deserializer.js:39:33
+      9    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1230:49
+      9    0.0%    0.1%  Builtin: StringPrototypeSplit
+      9    0.0%    0.1%  Builtin: RegExpPrototypeTest
+      8    0.0%    0.1%  Stub: StringAddStub {2}
+      8    0.0%    0.1%  LazyCompile: *queryCallback C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:200:31
+      8    0.0%    0.1%  LazyCompile: *nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+      8    0.0%    0.1%  LazyCompile: *TLSSocket._init _tls_wrap.js:426:37
+      8    0.0%    0.1%  LazyCompile: *SchemaType.castForQueryWrapper C:\node\cryptodev\node_modules\mongoose\lib\schematype.js:1033:52
+      8    0.0%    0.1%  LazyCompile: *Cursor C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:73:22
+      8    0.0%    0.1%  Function: ~realpathSync fs.js:1571:40
+      8    0.0%    0.1%  Function: ~isInvalidPath _http_client.js:52:23
+      8    0.0%    0.1%  Function: ~handleOperationCallback C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:537:37
+      8    0.0%    0.1%  Function: ~getTokenData C:\node\cryptodev\contracts\ether-naughts-ships.js:19:22
+      8    0.0%    0.1%  Function: ~args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+      8    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\interface.js:300:27
+      8    0.0%    0.1%  Builtin: StringIndexOf
+      8    0.0%    0.1%  Builtin: ObjectHasOwnProperty
+      8    0.0%    0.1%  Builtin: HandleApiCall
+      8    0.0%    0.1%  Builtin: FastCloneShallowObject
+      7    0.0%    0.1%  RegExp: [\\r\\n]
+      7    0.0%    0.1%  LazyCompile: *onwrite _stream_writable.js:422:17
+      7    0.0%    0.1%  LazyCompile: *format url.js:566:39
+      7    0.0%    0.1%  LazyCompile: *createConnection https.js:82:26
+      7    0.0%    0.1%  LazyCompile: *Schema.path C:\node\cryptodev\node_modules\mongoose\lib\schema.js:410:33
+      7    0.0%    0.1%  LazyCompile: *ReadableState _stream_readable.js:58:23
+      7    0.0%    0.1%  LazyCompile: *Duplex _stream_duplex.js:44:16
+      7    0.0%    0.1%  LazyCompile: *ClientRequest._deferToConnect _http_client.js:277:36
+      7    0.0%    0.1%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:549:54
+      7    0.0%    0.1%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:60:24
+      7    0.0%    0.1%  Function: ~value C:\node\cryptodev\node_modules\bson\lib\bson\binary.js:210:40
+      7    0.0%    0.1%  Function: ~nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+      7    0.0%    0.1%  Function: ~analyzeSchema C:\node\cryptodev\node_modules\mongoose\lib\queryhelpers.js:155:31
+      7    0.0%    0.1%  Function: ~analyzePath C:\node\cryptodev\node_modules\mongoose\lib\queryhelpers.js:114:29
+      7    0.0%    0.1%  Builtin: PromiseAll
+      7    0.0%    0.1%  Builtin: Call_ReceiverIsNotNullOrUndefined
+      6    0.0%    0.1%  Stub: RecordWriteStub {5}
+      6    0.0%    0.1%  Stub: RecordWriteStub {1}
+      6    0.0%    0.1%  Stub: InternalArrayConstructorStub
+      6    0.0%    0.1%  RegExp: ^[a-z0-9.+-]+:
+      6    0.0%    0.1%  LazyCompile: *onceWrapper events.js:307:21
+      6    0.0%    0.1%  LazyCompile: *match native string.js:12:6
+      6    0.0%    0.1%  LazyCompile: *internalConnect net.js:904:25
+      6    0.0%    0.1%  LazyCompile: *endSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:47:13
+      6    0.0%    0.1%  LazyCompile: *end _http_outgoing.js:726:45
+      6    0.0%    0.1%  LazyCompile: *Writable _stream_writable.js:194:18
+      6    0.0%    0.1%  LazyCompile: *Uint8Array native typedarray.js:158:31
+      6    0.0%    0.1%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+      6    0.0%    0.1%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:720:75
+      6    0.0%    0.1%  Function: ~set native typedarray.js:954:45
+      6    0.0%    0.1%  Function: ~parse url.js:101:37
+      6    0.0%    0.1%  Function: ~end _http_outgoing.js:726:45
+      6    0.0%    0.1%  Function: ~emitLookup net.js:1087:44
+      6    0.0%    0.1%  Function: ~dispatchEvent C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:589:32
+      6    0.0%    0.1%  Function: ~Socket.write net.js:699:34
+      6    0.0%    0.1%  Function: ~Socket._writeGeneric net.js:708:42
+      6    0.0%    0.1%  Function: ~SchemaString.cast C:\node\cryptodev\node_modules\mongoose\lib\schema\string.js:407:39
+      6    0.0%    0.1%  Function: ~NativeModule.require bootstrap_node.js:516:34
+      6    0.0%    0.1%  Function: ~ConvertToString native array.js:133:25
+      6    0.0%    0.1%  Function: ~Connection.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:704:38
+      6    0.0%    0.1%  Function: ~Collection.find C:\node\cryptodev\node_modules\mongodb\lib\collection.js:233:37
+      6    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:654:24
+      6    0.0%    0.1%  Builtin: ResolveNativePromise
+      5    0.0%    0.1%  Stub: RecordWriteStub {17}
+      5    0.0%    0.1%  Stub: RecordWriteStub {16}
+      5    0.0%    0.1%  Stub: JSEntryStub
+      5    0.0%    0.1%  Stub: ArraySingleArgumentConstructorStub
+      5    0.0%    0.1%  RegExp: ^(\\/\\/?(?!\\/)[^?\\s]*)(\\?[^\\s]*)?$
+      5    0.0%    0.1%  LazyCompile: *open C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:156:23
+      5    0.0%    0.1%  LazyCompile: *isConnected C:\node\cryptodev\node_modules\mongodb\lib\topologies\topology_base.js:329:14
+      5    0.0%    0.1%  LazyCompile: *TLSSocket._wrapHandle _tls_wrap.js:370:43
+      5    0.0%    0.1%  LazyCompile: *Query._castConditions C:\node\cryptodev\node_modules\mongoose\lib\query.js:1267:43
+      5    0.0%    0.1%  LazyCompile: *Pool.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1098:32
+      5    0.0%    0.1%  LazyCompile: *NativeCollection.(anonymous function) C:\node\cryptodev\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:111:43
+      5    0.0%    0.1%  LazyCompile: *InnerArrayJoin native array.js:275:24
+      5    0.0%    0.1%  LazyCompile: *Connection.isConnected C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:760:44
+      5    0.0%    0.1%  Function: ~session.endSession C:\node\cryptodev\node_modules\mongodb\lib\utils.js:397:28
+      5    0.0%    0.1%  Function: ~queryCallback C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:200:31
+      5    0.0%    0.1%  Function: ~ok assert.js:69:12
+      5    0.0%    0.1%  Function: ~internalConnect net.js:904:25
+      5    0.0%    0.1%  Function: ~getParamCoder C:\node\cryptodev\node_modules\ethers-contracts\interface.js:483:23
+      5    0.0%    0.1%  Function: ~executeOperation C:\node\cryptodev\node_modules\mongodb\lib\utils.js:365:26
+      5    0.0%    0.1%  Function: ~executeFindCommand C:\node\cryptodev\node_modules\mongodb-core\lib\wireprotocol\3_2_support.js:362:34
+      5    0.0%    0.1%  Function: ~comb10MulTo C:\node\cryptodev\node_modules\bn.js\lib\bn.js:1036:42
+      5    0.0%    0.1%  Function: ~afterConnect net.js:1146:22
+      5    0.0%    0.1%  Function: ~acquire C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:147:10
+      5    0.0%    0.1%  Function: ~Query._castConditions C:\node\cryptodev\node_modules\mongoose\lib\query.js:1267:43
+      5    0.0%    0.1%  Function: ~Cursor._find C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:187:34
+      5    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:748:22
+      5    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:323:18
+      5    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+      5    0.0%    0.1%  Builtin: TypedArrayConstructByArrayLike
+      5    0.0%    0.1%  Builtin: RegExpReplace
+      5    0.0%    0.1%  Builtin: PromiseConstructor
+      5    0.0%    0.1%  Builtin: ObjectProtoToString
+      5    0.0%    0.1%  Builtin: LessThan
+      5    0.0%    0.1%  Builtin: InterpreterPushArgsThenConstructFunction
+      5    0.0%    0.1%  Builtin: InstanceOf
+      5    0.0%    0.1%  Builtin: FastArrayShift
+      5    0.0%    0.1%  Builtin: DeleteProperty
+      5    0.0%    0.1%  Builtin: Call_ReceiverIsNullOrUndefined
+      4    0.0%    0.1%  Stub: CallApiCallbackStub {3}
+      4    0.0%    0.1%  Stub: CallApiCallbackStub {2}
+      4    0.0%    0.1%  StoreIC: A store IC from the snapshot {2}
+      4    0.0%    0.1%  StoreIC: A store IC from the snapshot {1}
+      4    0.0%    0.1%  LazyCompile: *tickOnSocket _http_client.js:614:22
+      4    0.0%    0.1%  LazyCompile: *onSocket _http_client.js:657:53
+      4    0.0%    0.1%  LazyCompile: *lookup dns.js:122:16
+      4    0.0%    0.1%  LazyCompile: *getName https.js:147:43
+      4    0.0%    0.1%  LazyCompile: *executeOperation C:\node\cryptodev\node_modules\mongodb\lib\utils.js:365:26
+      4    0.0%    0.1%  LazyCompile: *applyPaths C:\node\cryptodev\node_modules\mongoose\lib\query.js:3209:50
+      4    0.0%    0.1%  LazyCompile: *Query.findOne C:\node\cryptodev\node_modules\mongoose\lib\query.js:1561:35
+      4    0.0%    0.1%  LazyCompile: *Query C:\node\cryptodev\node_modules\mquery\lib\mquery.js:27:16
+      4    0.0%    0.1%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mquery\lib\utils.js:111:19
+      4    0.0%    0.1%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:56:21
+      4    0.0%    0.1%  Function: ~setImmediate timers.js:821:22
+      4    0.0%    0.1%  Function: ~removeListener events.js:355:28
+      4    0.0%    0.1%  Function: ~open C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:156:23
+      4    0.0%    0.1%  Function: ~insert timers.js:158:16
+      4    0.0%    0.1%  Function: ~get C:\node\cryptodev\node_modules\mongodb\lib\db.js:247:16
+      4    0.0%    0.1%  Function: ~f C:\node\cryptodev\node_modules\js-sha3\src\sha3.js:283:20
+      4    0.0%    0.1%  Function: ~exports.connect _tls_wrap.js:1018:27
+      4    0.0%    0.1%  Function: ~emitNone events.js:104:18
+      4    0.0%    0.1%  Function: ~createWriteReq net.js:789:24
+      4    0.0%    0.1%  Function: ~commands.forEach.command C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1220:22
+      4    0.0%    0.1%  Function: ~close _tls_wrap.js:338:50
+      4    0.0%    0.1%  Function: ~abort C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:539:24
+      4    0.0%    0.1%  Function: ~_destroy internal/streams/destroy.js:32:30
+      4    0.0%    0.1%  Function: ~Writable.write _stream_writable.js:264:36
+      4    0.0%    0.1%  Function: ~Socket._write net.js:785:35
+      4    0.0%    0.1%  Function: ~NativeCollection.(anonymous function) C:\node\cryptodev\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:111:43
+      4    0.0%    0.1%  Function: ~Agent https.js:128:15
+      4    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongoose\lib\document.js:1113:46
+      4    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1377:18
+      4    0.0%    0.1%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:720:75
+      4    0.0%    0.1%  Builtin: ToObject
+      4    0.0%    0.1%  Builtin: StringPrototypeToLowerCaseIntl
+      4    0.0%    0.1%  Builtin: StringPrototypeReplace
+      4    0.0%    0.1%  Builtin: StringCharAt
+      4    0.0%    0.1%  Builtin: PromiseResolveClosure
+      4    0.0%    0.1%  Builtin: NewUnmappedArgumentsElements
+      4    0.0%    0.1%  Builtin: JSConstructStubApi
+      4    0.0%    0.1%  Builtin: Equal
+      3    0.0%    0.0%  Stub: RecordWriteStub {2}
+      3    0.0%    0.0%  Stub: RecordWriteStub {12}
+      3    0.0%    0.0%  Stub: RecordWriteStub {11}
+      3    0.0%    0.0%  Stub: CallApiCallbackStub {1}
+      3    0.0%    0.0%  LazyCompile: *toObject C:\node\cryptodev\node_modules\mongoose\lib\utils.js:337:37
+      3    0.0%    0.0%  LazyCompile: *resume_ _stream_readable.js:819:17
+      3    0.0%    0.0%  LazyCompile: *merge C:\node\cryptodev\node_modules\mongoose\lib\utils.js:309:31
+      3    0.0%    0.0%  LazyCompile: *isAllowedHttpMethod C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:139:37
+      3    0.0%    0.0%  LazyCompile: *httpSocketSetup _http_common.js:233:25
+      3    0.0%    0.0%  LazyCompile: *getHeader _http_outgoing.js:526:57
+      3    0.0%    0.0%  LazyCompile: *get C:\node\cryptodev\node_modules\mongoose\lib\services\document\compile.js:120:20
+      3    0.0%    0.0%  LazyCompile: *checkIsHttpToken _http_common.js:282:26
+      3    0.0%    0.0%  LazyCompile: *check C:\node\cryptodev\node_modules\ethers-providers\provider.js:40:15
+      3    0.0%    0.0%  LazyCompile: *bigNumberify C:\node\cryptodev\node_modules\ethers-utils\bignumber.js:140:22
+      3    0.0%    0.0%  LazyCompile: *_unrefTimer net.js:258:52
+      3    0.0%    0.0%  LazyCompile: *_storeHeader _http_outgoing.js:290:22
+      3    0.0%    0.0%  LazyCompile: *_flushOutput _http_outgoing.js:834:63
+      3    0.0%    0.0%  LazyCompile: *TLSSocket._releaseControl _tls_wrap.js:606:47
+      3    0.0%    0.0%  LazyCompile: *SchemaType._isRef C:\node\cryptodev\node_modules\mongoose\lib\schematype.js:965:29
+      3    0.0%    0.0%  LazyCompile: *Response C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:398:24
+      3    0.0%    0.0%  LazyCompile: *Query._optionsForExec C:\node\cryptodev\node_modules\mongoose\lib\query.js:1145:43
+      3    0.0%    0.0%  LazyCompile: *Query._findOne C:\node\cryptodev\node_modules\mongoose\lib\query.js:1484:36
+      3    0.0%    0.0%  LazyCompile: *Module._load module.js:440:24
+      3    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1230:49
+      3    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:100:65
+      3    0.0%    0.0%  Function: ~writeOrBuffer _stream_writable.js:339:23
+      3    0.0%    0.0%  Function: ~uuidV4 C:\node\cryptodev\node_modules\mongodb-core\lib\utils.js:5:16
+      3    0.0%    0.0%  Function: ~urlParse url.js:93:18
+      3    0.0%    0.0%  Function: ~socketCloseListener _http_client.js:337:29
+      3    0.0%    0.0%  Function: ~reuse timers.js:356:15
+      3    0.0%    0.0%  Function: ~onlookup dns.js:90:18
+      3    0.0%    0.0%  Function: ~onSocketNT _http_client.js:661:20
+      3    0.0%    0.0%  Function: ~lookupAndConnect net.js:1034:26
+      3    0.0%    0.0%  Function: ~listOnTimeout timers.js:211:23
+      3    0.0%    0.0%  Function: ~join native array.js:288:46
+      3    0.0%    0.0%  Function: ~isub C:\node\cryptodev\node_modules\bn.js\lib\bn.js:922:37
+      3    0.0%    0.0%  Function: ~fs.readFileSync fs.js:548:27
+      3    0.0%    0.0%  Function: ~format url.js:566:39
+      3    0.0%    0.0%  Function: ~extname path.js:921:28
+      3    0.0%    0.0%  Function: ~emitOne events.js:114:17
+      3    0.0%    0.0%  Function: ~emitErrorNT internal/streams/destroy.js:63:21
+      3    0.0%    0.0%  Function: ~emit events.js:156:44
+      3    0.0%    0.0%  Function: ~doWrite _stream_writable.js:379:17
+      3    0.0%    0.0%  Function: ~destroy internal/streams/destroy.js:4:17
+      3    0.0%    0.0%  Function: ~cloneObject C:\node\cryptodev\node_modules\mquery\lib\utils.js:65:62
+      3    0.0%    0.0%  Function: ~basename path.js:831:30
+      3    0.0%    0.0%  Function: ~addRequest _http_agent.js:140:49
+      3    0.0%    0.0%  Function: ~_storeHeader _http_outgoing.js:290:22
+      3    0.0%    0.0%  Function: ~_parseHex C:\node\cryptodev\node_modules\bn.js\lib\bn.js:210:47
+      3    0.0%    0.0%  Function: ~_makeLong path.js:688:32
+      3    0.0%    0.0%  Function: ~_flushOutput _http_outgoing.js:834:63
+      3    0.0%    0.0%  Function: ~_exceptionWithHostPort util.js:1031:32
+      3    0.0%    0.0%  Function: ~TLSSocket._init _tls_wrap.js:426:37
+      3    0.0%    0.0%  Function: ~TLSSocket _tls_wrap.js:265:19
+      3    0.0%    0.0%  Function: ~Socket._getsockname net.js:675:41
+      3    0.0%    0.0%  Function: ~Socket net.js:175:16
+      3    0.0%    0.0%  Function: ~Server.cursor C:\node\cryptodev\node_modules\mongodb-core\lib\topologies\server.js:859:35
+      3    0.0%    0.0%  Function: ~SchemaType._isRef C:\node\cryptodev\node_modules\mongoose\lib\schematype.js:965:29
+      3    0.0%    0.0%  Function: ~Schema.eachPath C:\node\cryptodev\node_modules\mongoose\lib\schema.js:621:37
+      3    0.0%    0.0%  Function: ~ReadableState _stream_readable.js:58:23
+      3    0.0%    0.0%  Function: ~Query._optionsForExec C:\node\cryptodev\node_modules\mongoose\lib\query.js:1145:43
+      3    0.0%    0.0%  Function: ~Long.negate C:\node\cryptodev\node_modules\bson\lib\bson\long.js:330:33
+      3    0.0%    0.0%  Function: ~Logger C:\node\cryptodev\node_modules\mongodb-core\lib\connection\logger.js:24:22
+      3    0.0%    0.0%  Function: ~Kareem.execPre C:\node\cryptodev\node_modules\kareem\index.js:8:36
+      3    0.0%    0.0%  Function: ~Cursor.limit C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:665:34
+      3    0.0%    0.0%  Function: ~Cursor C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:73:22
+      3    0.0%    0.0%  Function: ~ClientRequest _http_client.js:79:23
+      3    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongoose\lib\queryhelpers.js:164:29
+      3    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\kareem\index.js:264:45
+      3    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:60:24
+      3    0.0%    0.0%  Builtin: TypedArrayConstructByArrayBuffer
+      3    0.0%    0.0%  Builtin: ResumeGeneratorTrampoline
+      3    0.0%    0.0%  Builtin: InterpreterPushArgsThenCallFunction
+      3    0.0%    0.0%  Builtin: InterpreterPushArgsThenCall
+      3    0.0%    0.0%  Builtin: FastArrayPop
+      3    0.0%    0.0%  Builtin: CallVarargs
+      3    0.0%    0.0%  Builtin: ArrayPrototypeValues
+      3    0.0%    0.0%  Builtin: ArrayIteratorPrototypeNext
+      2    0.0%    0.0%  Stub: StoreFastElementStub
+      2    0.0%    0.0%  Stub: RecordWriteStub {7}
+      2    0.0%    0.0%  Stub: RecordWriteStub {6}
+      2    0.0%    0.0%  Stub: RecordWriteStub {4}
+      2    0.0%    0.0%  Stub: RecordWriteStub {3}
+      2    0.0%    0.0%  Stub: RecordWriteStub {35}
+      2    0.0%    0.0%  Stub: RecordWriteStub {23}
+      2    0.0%    0.0%  Stub: RecordWriteStub {22}
+      2    0.0%    0.0%  Stub: RecordWriteStub {20}
+      2    0.0%    0.0%  Stub: RecordWriteStub {19}
+      2    0.0%    0.0%  Stub: RecordWriteStub {15}
+      2    0.0%    0.0%  Stub: RecordWriteStub
+      2    0.0%    0.0%  Stub: InternalArraySingleArgumentConstructorStub
+      2    0.0%    0.0%  RegExp: ^(u?int)([0-9]*)$
+      2    0.0%    0.0%  LazyCompile: *waitForAuth C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1385:25
+      2    0.0%    0.0%  LazyCompile: *toString C:\node\cryptodev\node_modules\bn.js\lib\bn.js:429:45
+      2    0.0%    0.0%  LazyCompile: *socketCloseListener _http_client.js:337:29
+      2    0.0%    0.0%  LazyCompile: *setTimeout timers.js:425:20
+      2    0.0%    0.0%  LazyCompile: *setRequestHeader C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:192:35
+      2    0.0%    0.0%  LazyCompile: *serializeNumber C:\node\cryptodev\node_modules\bson\lib\bson\parser\serializer.js:59:31
+      2    0.0%    0.0%  LazyCompile: *remove internal/linkedlist.js:15:16
+      2    0.0%    0.0%  LazyCompile: *processImmediate timers.js:697:26
+      2    0.0%    0.0%  LazyCompile: *normalizeStringWin32 path.js:33:30
+      2    0.0%    0.0%  LazyCompile: *initRead _tls_wrap.js:246:18
+      2    0.0%    0.0%  LazyCompile: *hexlify C:\node\cryptodev\node_modules\ethers-utils\convert.js:116:17
+      2    0.0%    0.0%  LazyCompile: *getTransaction C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:44:24
+      2    0.0%    0.0%  LazyCompile: *getNewAsyncId net.js:64:23
+      2    0.0%    0.0%  LazyCompile: *get C:\node\cryptodev\node_modules\mongodb\lib\db.js:247:16
+      2    0.0%    0.0%  LazyCompile: *format util.js:182:16
+      2    0.0%    0.0%  LazyCompile: *doWrite _stream_writable.js:379:17
+      2    0.0%    0.0%  LazyCompile: *applyPaths C:\node\cryptodev\node_modules\mongoose\lib\queryhelpers.js:82:41
+      2    0.0%    0.0%  LazyCompile: *analyzeSchema C:\node\cryptodev\node_modules\mongoose\lib\queryhelpers.js:155:31
+      2    0.0%    0.0%  LazyCompile: *abort C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:539:24
+      2    0.0%    0.0%  LazyCompile: *_onceWrap events.js:330:19
+      2    0.0%    0.0%  LazyCompile: *_addListener events.js:233:22
+      2    0.0%    0.0%  LazyCompile: *StackPush native array.js:80:19
+      2    0.0%    0.0%  LazyCompile: *SchemaType._applySetters C:\node\cryptodev\node_modules\mongoose\lib\schematype.js:663:46
+      2    0.0%    0.0%  LazyCompile: *Response.parse C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:436:36
+      2    0.0%    0.0%  LazyCompile: *Query C:\node\cryptodev\node_modules\mongoose\lib\query.js:45:15
+      2    0.0%    0.0%  LazyCompile: *OutgoingMessage _http_outgoing.js:68:25
+      2    0.0%    0.0%  LazyCompile: *Long.lessThanOrEqual C:\node\cryptodev\node_modules\bson\lib\bson\long.js:269:42
+      2    0.0%    0.0%  LazyCompile: *Long.add C:\node\cryptodev\node_modules\bson\lib\bson\long.js:345:30
+      2    0.0%    0.0%  LazyCompile: *Keccak.toString.Keccak.hex C:\node\cryptodev\node_modules\js-sha3\src\sha3.js:184:63
+      2    0.0%    0.0%  LazyCompile: *Join native array.js:120:14
+      2    0.0%    0.0%  LazyCompile: *Connection.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:704:38
+      2    0.0%    0.0%  LazyCompile: *Buffer.write buffer.js:850:34
+      2    0.0%    0.0%  LazyCompile: *BigNumber C:\node\cryptodev\node_modules\ethers-utils\bignumber.js:14:19
+      2    0.0%    0.0%  LazyCompile: *Agent https.js:128:15
+      2    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+      2    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:323:18
+      2    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:547:32
+      2    0.0%    0.0%  KeyedStoreIC: A keyed store IC from the snapshot {2}
+      2    0.0%    0.0%  Function: ~validateHost _http_client.js:71:22
+      2    0.0%    0.0%  Function: ~utils.promiseOrCallback C:\node\cryptodev\node_modules\mongoose\lib\query.js:2948:44
+      2    0.0%    0.0%  Function: ~toTwos C:\node\cryptodev\node_modules\bn.js\lib\bn.js:657:41
+      2    0.0%    0.0%  Function: ~toString C:\node\cryptodev\node_modules\bn.js\lib\bn.js:429:45
+      2    0.0%    0.0%  Function: ~strip C:\node\cryptodev\node_modules\bn.js\lib\bn.js:333:39
+      2    0.0%    0.0%  Function: ~split C:\node\cryptodev\node_modules\bn.js\lib\bn.js:2997:41
+      2    0.0%    0.0%  Function: ~spliceOne internal/util.js:270:19
+      2    0.0%    0.0%  Function: ~socketOnData _http_client.js:433:22
+      2    0.0%    0.0%  Function: ~setTimeout timers.js:425:20
+      2    0.0%    0.0%  Function: ~setState C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:605:26
+      2    0.0%    0.0%  Function: ~serializeCommands C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1044:33
+      2    0.0%    0.0%  Function: ~send C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:267:23
+      2    0.0%    0.0%  Function: ~resolve path.js:193:28
+      2    0.0%    0.0%  Function: ~request.onreadystatechange C:\node\cryptodev\node_modules\ethers-providers\provider.js:557:46
+      2    0.0%    0.0%  Function: ~request http.js:37:17
+      2    0.0%    0.0%  Function: ~pack C:\node\cryptodev\node_modules\ethers-contracts\interface.js:264:14
+      2    0.0%    0.0%  Function: ~normalizeArgs net.js:117:23
+      2    0.0%    0.0%  Function: ~isHexString C:\node\cryptodev\node_modules\ethers-utils\convert.js:106:21
+      2    0.0%    0.0%  Function: ~handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+      2    0.0%    0.0%  Function: ~getTransaction C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:44:24
+      2    0.0%    0.0%  Function: ~getChecksumAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:8:28
+      2    0.0%    0.0%  Function: ~fromString buffer.js:296:20
+      2    0.0%    0.0%  Function: ~from native array.js:905:38
+      2    0.0%    0.0%  Function: ~freeParser _http_common.js:203:20
+      2    0.0%    0.0%  Function: ~free internal/freelist.js:17:7
+      2    0.0%    0.0%  Function: ~findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1348:23
+      2    0.0%    0.0%  Function: ~exports.convertALPNProtocols tls.js:81:40
+      2    0.0%    0.0%  Function: ~errorHandler C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:458:47
+      2    0.0%    0.0%  Function: ~encode C:\node\cryptodev\node_modules\ethers-contracts\interface.js:432:25
+      2    0.0%    0.0%  Function: ~createSingleTimeout timers.js:454:29
+      2    0.0%    0.0%  Function: ~createConnection https.js:82:26
+      2    0.0%    0.0%  Function: ~clearBuffer _stream_writable.js:469:21
+      2    0.0%    0.0%  Function: ~addMethod C:\node\cryptodev\node_modules\ethers-contracts\interface.js:575:23
+      2    0.0%    0.0%  Function: ~_onceWrap events.js:330:19
+      2    0.0%    0.0%  Function: ~_flush _http_outgoing.js:816:51
+      2    0.0%    0.0%  Function: ~_cb C:\node\cryptodev\node_modules\kareem\index.js:278:17
+      2    0.0%    0.0%  Function: ~WritableState _stream_writable.js:41:23
+      2    0.0%    0.0%  Function: ~Writable _stream_writable.js:194:18
+      2    0.0%    0.0%  Function: ~Uint8ArrayConstructByTypedArray native typedarray.js:144:41
+      2    0.0%    0.0%  Function: ~Uint8Array native typedarray.js:158:31
+      2    0.0%    0.0%  Function: ~TLSSocket._wrapHandle _tls_wrap.js:370:43
+      2    0.0%    0.0%  Function: ~StackPush native array.js:80:19
+      2    0.0%    0.0%  Function: ~Socket._destroy net.js:534:37
+      2    0.0%    0.0%  Function: ~SecureContext _tls_common.js:34:23
+      2    0.0%    0.0%  Function: ~SchemaType.castForQueryWrapper C:\node\cryptodev\node_modules\mongoose\lib\schematype.js:1033:52
+      2    0.0%    0.0%  Function: ~SchemaString.castForQuery C:\node\cryptodev\node_modules\mongoose\lib\schema\string.js:501:47
+      2    0.0%    0.0%  Function: ~Response.parse C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:436:36
+      2    0.0%    0.0%  Function: ~Query.setOptions C:\node\cryptodev\node_modules\mongoose\lib\query.js:998:38
+      2    0.0%    0.0%  Function: ~Query C:\node\cryptodev\node_modules\mquery\lib\mquery.js:27:16
+      2    0.0%    0.0%  Function: ~Query C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:31:21
+      2    0.0%    0.0%  Function: ~OutgoingMessage _http_outgoing.js:68:25
+      2    0.0%    0.0%  Function: ~Module._resolveLookupPaths module.js:337:38
+      2    0.0%    0.0%  Function: ~MapFindEntry native collection.js:39:22
+      2    0.0%    0.0%  Function: ~Long.fromNumber C:\node\cryptodev\node_modules\bson\lib\bson\long.js:701:27
+      2    0.0%    0.0%  Function: ~Keccak.toString.Keccak.hex C:\node\cryptodev\node_modules\js-sha3\src\sha3.js:184:63
+      2    0.0%    0.0%  Function: ~Join native array.js:120:14
+      2    0.0%    0.0%  Function: ~Immediate timers.js:803:19
+      2    0.0%    0.0%  Function: ~EventEmitter.init events.js:62:29
+      2    0.0%    0.0%  Function: ~Document.init C:\node\cryptodev\node_modules\mongoose\lib\document.js:318:35
+      2    0.0%    0.0%  Function: ~Document.get C:\node\cryptodev\node_modules\mongoose\lib\document.js:958:34
+      2    0.0%    0.0%  Function: ~Document C:\node\cryptodev\node_modules\mongoose\lib\document.js:47:18
+      2    0.0%    0.0%  Function: ~Cursor C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:101:22
+      2    0.0%    0.0%  Function: ~Connection.isConnected C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:760:44
+      2    0.0%    0.0%  Function: ~Collection.findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1339:40
+      2    0.0%    0.0%  Function: ~Collection.doQueue C:\node\cryptodev\node_modules\mongoose\lib\collection.js:124:40
+      2    0.0%    0.0%  Function: ~Buffer.copy buffer.js:599:33
+      2    0.0%    0.0%  Function: ~Buffer buffer.js:147:16
+      2    0.0%    0.0%  Function: ~<anonymous> _tls_wrap.js:403:28
+      2    0.0%    0.0%  Function: ~<anonymous> _http_common.js:170:53
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mquery\lib\utils.js:111:19
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongoose\lib\utils.js:222:16
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:552:34
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\kareem\index.js:289:65
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\kareem\index.js:134:37
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:823:47
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:818:66
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:547:32
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\fallback-provider.js:40:69
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\interface.js:610:37
+      2    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:82:44
+      2    0.0%    0.0%  Builtin: ToBoolean
+      2    0.0%    0.0%  Builtin: RegExpSplit
+      2    0.0%    0.0%  Builtin: NonNumberToNumber
+      2    0.0%    0.0%  Builtin: MapLookupHashIndex
+      2    0.0%    0.0%  Builtin: LoadIC_Uninitialized
+      2    0.0%    0.0%  Builtin: InterpreterPushUndefinedAndArgsThenCallFunction
+      2    0.0%    0.0%  Builtin: GreaterThan
+      2    0.0%    0.0%  Builtin: GlobalIsFinite
+      2    0.0%    0.0%  Builtin: FastFunctionPrototypeBind
+      2    0.0%    0.0%  Builtin: Divide
+      2    0.0%    0.0%  Builtin: CreateGeneratorObject
+      2    0.0%    0.0%  Builtin: CallWithArrayLike
+      2    0.0%    0.0%  Builtin: CallBoundFunction
+      1    0.0%    0.0%  Stub: RecordWriteStub {9}
+      1    0.0%    0.0%  Stub: RecordWriteStub {8}
+      1    0.0%    0.0%  Stub: RecordWriteStub {42}
+      1    0.0%    0.0%  Stub: RecordWriteStub {41}
+      1    0.0%    0.0%  Stub: RecordWriteStub {40}
+      1    0.0%    0.0%  Stub: RecordWriteStub {39}
+      1    0.0%    0.0%  Stub: RecordWriteStub {38}
+      1    0.0%    0.0%  Stub: RecordWriteStub {37}
+      1    0.0%    0.0%  Stub: RecordWriteStub {36}
+      1    0.0%    0.0%  Stub: RecordWriteStub {34}
+      1    0.0%    0.0%  Stub: RecordWriteStub {33}
+      1    0.0%    0.0%  Stub: RecordWriteStub {32}
+      1    0.0%    0.0%  Stub: RecordWriteStub {31}
+      1    0.0%    0.0%  Stub: RecordWriteStub {30}
+      1    0.0%    0.0%  Stub: RecordWriteStub {29}
+      1    0.0%    0.0%  Stub: RecordWriteStub {28}
+      1    0.0%    0.0%  Stub: RecordWriteStub {27}
+      1    0.0%    0.0%  Stub: RecordWriteStub {26}
+      1    0.0%    0.0%  Stub: RecordWriteStub {25}
+      1    0.0%    0.0%  Stub: RecordWriteStub {24}
+      1    0.0%    0.0%  Stub: RecordWriteStub {21}
+      1    0.0%    0.0%  Stub: RecordWriteStub {18}
+      1    0.0%    0.0%  Stub: RecordWriteStub {14}
+      1    0.0%    0.0%  Stub: RecordWriteStub {13}
+      1    0.0%    0.0%  Stub: RecordWriteStub {10}
+      1    0.0%    0.0%  Stub: DoubleToIStub
+      1    0.0%    0.0%  Stub: CallApiCallbackStub {4}
+      1    0.0%    0.0%  Stub: CallApiCallbackStub
+      1    0.0%    0.0%  Script: ~<anonymous> C:\node\cryptodev\node_modules\vary\index.js:1:1
+      1    0.0%    0.0%  RegExp: ^[a-z0-9.+-]+: {1}
+      1    0.0%    0.0%  RegExp: [\\u0000-\\u0020]
+      1    0.0%    0.0%  RegExp: :[0-9]*$ {1}
+      1    0.0%    0.0%  RegExp: :[0-9]*$
+      1    0.0%    0.0%  RegExp: :.*$
+      1    0.0%    0.0%  LazyCompile: *utils.promiseOrCallback C:\node\cryptodev\node_modules\mongoose\lib\query.js:2948:44
+      1    0.0%    0.0%  LazyCompile: *tryOnTimeout timers.js:302:22
+      1    0.0%    0.0%  LazyCompile: *socketErrorListener _http_client.js:381:29
+      1    0.0%    0.0%  LazyCompile: *slice buffer.js:961:40
+      1    0.0%    0.0%  LazyCompile: *setCursorNotified C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:551:33
+      1    0.0%    0.0%  LazyCompile: *serializeString C:\node\cryptodev\node_modules\bson\lib\bson\parser\serializer.js:37:31
+      1    0.0%    0.0%  LazyCompile: *serializeCommands C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1044:33
+      1    0.0%    0.0%  LazyCompile: *serializeBoolean C:\node\cryptodev\node_modules\bson\lib\bson\parser\serializer.js:139:32
+      1    0.0%    0.0%  LazyCompile: *request.onreadystatechange C:\node\cryptodev\node_modules\ethers-providers\provider.js:557:46
+      1    0.0%    0.0%  LazyCompile: *removeListener events.js:355:28
+      1    0.0%    0.0%  LazyCompile: *padZeros C:\node\cryptodev\node_modules\ethers-utils\convert.js:95:18
+      1    0.0%    0.0%  LazyCompile: *pack C:\node\cryptodev\node_modules\ethers-contracts\interface.js:264:14
+      1    0.0%    0.0%  LazyCompile: *once events.js:338:44
+      1    0.0%    0.0%  LazyCompile: *onCorkedFinish _stream_writable.js:623:24
+      1    0.0%    0.0%  LazyCompile: *normalizeArgs net.js:117:23
+      1    0.0%    0.0%  LazyCompile: *nextObject C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:733:26
+      1    0.0%    0.0%  LazyCompile: *next C:\node\cryptodev\node_modules\ethers-providers\fallback-provider.js:44:22
+      1    0.0%    0.0%  LazyCompile: *join native array.js:288:46
+      1    0.0%    0.0%  LazyCompile: *insert timers.js:158:16
+      1    0.0%    0.0%  LazyCompile: *init C:\node\cryptodev\node_modules\mongoose\lib\document.js:375:14
+      1    0.0%    0.0%  LazyCompile: *getTransactionString C:\node\cryptodev\node_modules\ethers-providers\etherscan-provider.js:22:30
+      1    0.0%    0.0%  LazyCompile: *get C:\node\cryptodev\node_modules\mongodb-core\lib\topologies\server.js:209:16
+      1    0.0%    0.0%  LazyCompile: *exports.convertNPNProtocols tls.js:71:39
+      1    0.0%    0.0%  LazyCompile: *exports.convertALPNProtocols tls.js:81:40
+      1    0.0%    0.0%  LazyCompile: *encode C:\node\cryptodev\node_modules\ethers-contracts\interface.js:432:25
+      1    0.0%    0.0%  LazyCompile: *emitOne events.js:114:17
+      1    0.0%    0.0%  LazyCompile: *emitMessageHandler C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:283:34
+      1    0.0%    0.0%  LazyCompile: *emitLookup net.js:1087:44
+      1    0.0%    0.0%  LazyCompile: *done _tls_wrap.js:347:16
+      1    0.0%    0.0%  LazyCompile: *createImmediate timers.js:856:25
+      1    0.0%    0.0%  LazyCompile: *commands.forEach.command C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1220:22
+      1    0.0%    0.0%  LazyCompile: *clone C:\node\cryptodev\node_modules\mquery\lib\utils.js:18:44
+      1    0.0%    0.0%  LazyCompile: *clone C:\node\cryptodev\node_modules\bn.js\lib\bn.js:319:39
+      1    0.0%    0.0%  LazyCompile: *args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+      1    0.0%    0.0%  LazyCompile: *args internal/util/types.js:11:10
+      1    0.0%    0.0%  LazyCompile: *alloc internal/freelist.js:11:8
+      1    0.0%    0.0%  LazyCompile: *alignSize C:\node\cryptodev\node_modules\ethers-contracts\interface.js:260:19
+      1    0.0%    0.0%  LazyCompile: *acquire C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:147:10
+      1    0.0%    0.0%  LazyCompile: *_unsetCastError C:\node\cryptodev\node_modules\mongoose\lib\query.js:1240:59
+      1    0.0%    0.0%  LazyCompile: *_cb C:\node\cryptodev\node_modules\kareem\index.js:278:17
+      1    0.0%    0.0%  LazyCompile: *Writable.write _stream_writable.js:264:36
+      1    0.0%    0.0%  LazyCompile: *Uint8ArrayConstructByTypedArray native typedarray.js:144:41
+      1    0.0%    0.0%  LazyCompile: *StackPop native array.js:83:18
+      1    0.0%    0.0%  LazyCompile: *StackHas native array.js:86:18
+      1    0.0%    0.0%  LazyCompile: *Socket.read net.js:360:33
+      1    0.0%    0.0%  LazyCompile: *Socket._writev net.js:780:36
+      1    0.0%    0.0%  LazyCompile: *Socket._write net.js:785:35
+      1    0.0%    0.0%  LazyCompile: *SecureContext _tls_common.js:34:23
+      1    0.0%    0.0%  LazyCompile: *Schema.eachPath C:\node\cryptodev\node_modules\mongoose\lib\schema.js:621:37
+      1    0.0%    0.0%  LazyCompile: *Readable _stream_readable.js:140:18
+      1    0.0%    0.0%  LazyCompile: *Query.then C:\node\cryptodev\node_modules\mongoose\lib\query.js:2974:32
+      1    0.0%    0.0%  LazyCompile: *Query.setOptions C:\node\cryptodev\node_modules\mquery\lib\mquery.js:169:39
+      1    0.0%    0.0%  LazyCompile: *Query.setOptions C:\node\cryptodev\node_modules\mongoose\lib\query.js:998:38
+      1    0.0%    0.0%  LazyCompile: *Query._wrapCallback C:\node\cryptodev\node_modules\mquery\lib\mquery.js:2649:42
+      1    0.0%    0.0%  LazyCompile: *NativeModule.require bootstrap_node.js:516:34
+      1    0.0%    0.0%  LazyCompile: *NativeModule.nonInternalExists bootstrap_node.js:561:46
+      1    0.0%    0.0%  LazyCompile: *NativeModule.isInternal bootstrap_node.js:565:39
+      1    0.0%    0.0%  LazyCompile: *Long.toNumber C:\node\cryptodev\node_modules\bson\lib\bson\long.js:76:35
+      1    0.0%    0.0%  LazyCompile: *Logger C:\node\cryptodev\node_modules\mongodb-core\lib\connection\logger.js:24:22
+      1    0.0%    0.0%  LazyCompile: *Keccak C:\node\cryptodev\node_modules\js-sha3\src\sha3.js:93:18
+      1    0.0%    0.0%  LazyCompile: *Document.$__init C:\node\cryptodev\node_modules\mongoose\lib\document.js:337:38
+      1    0.0%    0.0%  LazyCompile: *Document.$__buildDoc C:\node\cryptodev\node_modules\mongoose\lib\document.js:178:42
+      1    0.0%    0.0%  LazyCompile: *Document C:\node\cryptodev\node_modules\mongoose\lib\document.js:47:18
+      1    0.0%    0.0%  LazyCompile: *BN C:\node\cryptodev\node_modules\bn.js\lib\bn.js:21:15
+      1    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:654:24
+      1    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1377:18
+      1    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\kareem\index.js:22:37
+      1    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\kareem\index.js:134:37
+      1    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-utils\bignumber.js:57:55
+      1    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:818:66
+      1    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:52:64
+      1    0.0%    0.0%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\fallback-provider.js:40:69
+      1    0.0%    0.0%  LazyCompile: *$getMaxListeners events.js:89:26
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {7}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {6}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {5}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {4}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {3}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {2}
+      1    0.0%    0.0%  Handler: An IC handler from the snapshot {1}
+      1    0.0%    0.0%  Function: ~write_ _http_outgoing.js:623:16
+      1    0.0%    0.0%  Function: ~write _http_outgoing.js:619:49
+      1    0.0%    0.0%  Function: ~waitForAuth C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1385:25
+      1    0.0%    0.0%  Function: ~validateHeader _http_outgoing.js:488:24
+      1    0.0%    0.0%  Function: ~validChunk _stream_writable.js:245:20
+      1    0.0%    0.0%  Function: ~utf8ToBytes C:\node\cryptodev\node_modules\ethers-utils\utf8.js:5:21
+      1    0.0%    0.0%  Function: ~utf8Text string_decoder.js:198:18
+      1    0.0%    0.0%  Function: ~ucmp C:\node\cryptodev\node_modules\bn.js\lib\bn.js:2765:37
+      1    0.0%    0.0%  Function: ~tryStatSync fs.js:514:21
+      1    0.0%    0.0%  Function: ~tryOnImmediate timers.js:746:24
+      1    0.0%    0.0%  Function: ~translatePeerCertificate _tls_common.js:176:69
+      1    0.0%    0.0%  Function: ~toRealPath module.js:155:20
+      1    0.0%    0.0%  Function: ~toObject C:\node\cryptodev\node_modules\mongoose\lib\utils.js:337:37
+      1    0.0%    0.0%  Function: ~tickOnSocket _http_client.js:614:22
+      1    0.0%    0.0%  Function: ~syncWrapper C:\node\cryptodev\node_modules\kareem\index.js:231:30
+      1    0.0%    0.0%  Function: ~storeHeader _http_outgoing.js:429:21
+      1    0.0%    0.0%  Function: ~socketErrorListener _http_client.js:381:29
+      1    0.0%    0.0%  Function: ~socket.once https.js:119:24
+      1    0.0%    0.0%  Function: ~shift internal/process/next_tick.js:30:8
+      1    0.0%    0.0%  Function: ~setMaxListeners events.js:82:66
+      1    0.0%    0.0%  Function: ~serializeObject C:\node\cryptodev\node_modules\bson\lib\bson\parser\serializer.js:294:31
+      1    0.0%    0.0%  Function: ~serialize C:\node\cryptodev\node_modules\bson\lib\bson\bson.js:47:46
+      1    0.0%    0.0%  Function: ~select C:\node\cryptodev\node_modules\mongoose\lib\query.js:826:41
+      1    0.0%    0.0%  Function: ~resume_ _stream_readable.js:819:17
+      1    0.0%    0.0%  Function: ~requiredPaths C:\node\cryptodev\node_modules\mongoose\lib\schema.js:640:56
+      1    0.0%    0.0%  Function: ~require internal/module.js:8:19
+      1    0.0%    0.0%  Function: ~removeSocket _http_agent.js:273:53
+      1    0.0%    0.0%  Function: ~release C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:163:10
+      1    0.0%    0.0%  Function: ~processImmediate timers.js:697:26
+      1    0.0%    0.0%  Function: ~populateDescription C:\node\cryptodev\node_modules\ethers-contracts\interface.js:532:29
+      1    0.0%    0.0%  Function: ~peek internal/linkedlist.js:9:14
+      1    0.0%    0.0%  Function: ~pathtoRegexp C:\node\cryptodev\node_modules\path-to-regexp\index.js:28:22
+      1    0.0%    0.0%  Function: ~parseCertString tls.js:233:51
+      1    0.0%    0.0%  Function: ~padZeros C:\node\cryptodev\node_modules\ethers-utils\convert.js:95:18
+      1    0.0%    0.0%  Function: ~onwriteStateUpdate _stream_writable.js:415:28
+      1    0.0%    0.0%  Function: ~onwrite _stream_writable.js:422:17
+      1    0.0%    0.0%  Function: ~oncreate _http_agent.js:228:20
+      1    0.0%    0.0%  Function: ~onSocket _http_client.js:690:20
+      1    0.0%    0.0%  Function: ~onClose _http_agent.js:251:19
+      1    0.0%    0.0%  Function: ~nullCheck fs.js:157:19
+      1    0.0%    0.0%  Function: ~normalizeStringWin32 path.js:33:30
+      1    0.0%    0.0%  Function: ~nextPart fs.js:1558:31
+      1    0.0%    0.0%  Function: ~nextObject C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:733:26
+      1    0.0%    0.0%  Function: ~model.Query C:\node\cryptodev\node_modules\mongoose\lib\model.js:3803:25
+      1    0.0%    0.0%  Function: ~model C:\node\cryptodev\node_modules\mongoose\lib\model.js:3746:27
+      1    0.0%    0.0%  Function: ~modeNum fs.js:615:17
+      1    0.0%    0.0%  Function: ~maybeReadMore _stream_readable.js:524:23
+      1    0.0%    0.0%  Function: ~lookup dns.js:122:16
+      1    0.0%    0.0%  Function: ~keccak256 C:\node\cryptodev\node_modules\ethers-utils\keccak256.js:7:19
+      1    0.0%    0.0%  Function: ~iushrn C:\node\cryptodev\node_modules\bn.js\lib\bn.js:1999:41
+      1    0.0%    0.0%  Function: ~isValid C:\node\cryptodev\node_modules\bson\lib\bson\objectid.js:313:36
+      1    0.0%    0.0%  Function: ~isIPv4 dns.js:74:16
+      1    0.0%    0.0%  Function: ~isDestroyed C:\node\cryptodev\node_modules\mongodb\lib\topologies\topology_base.js:337:14
+      1    0.0%    0.0%  Function: ~isCursorKilled C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:525:30
+      1    0.0%    0.0%  Function: ~isBigNumber C:\node\cryptodev\node_modules\ethers-utils\bignumber.js:136:21
+      1    0.0%    0.0%  Function: ~isBad tls.js:120:17
+      1    0.0%    0.0%  Function: ~isBN C:\node\cryptodev\node_modules\bn.js\lib\bn.js:57:27
+      1    0.0%    0.0%  Function: ~isArrayish C:\node\cryptodev\node_modules\ethers-utils\convert.js:20:20
+      1    0.0%    0.0%  Function: ~isAllowedHttpHeader C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:129:37
+      1    0.0%    0.0%  Function: ~initRead _tls_wrap.js:246:18
+      1    0.0%    0.0%  Function: ~init C:\node\cryptodev\node_modules\mongoose\lib\document.js:375:14
+      1    0.0%    0.0%  Function: ~imaskn C:\node\cryptodev\node_modules\bn.js\lib\bn.js:2097:41
+      1    0.0%    0.0%  Function: ~hasTimedOut C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:120:14
+      1    0.0%    0.0%  Function: ~getOptions fs.js:64:20
+      1    0.0%    0.0%  Function: ~getName https.js:147:43
+      1    0.0%    0.0%  Function: ~getName _http_agent.js:118:43
+      1    0.0%    0.0%  Function: ~getHeader _http_outgoing.js:526:57
+      1    0.0%    0.0%  Function: ~get C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:101:16
+      1    0.0%    0.0%  Function: ~get C:\node\cryptodev\node_modules\ethers-providers\fallback-provider.js:32:22
+      1    0.0%    0.0%  Function: ~func C:\node\cryptodev\node_modules\ethers-contracts\interface.js:624:40
+      1    0.0%    0.0%  Function: ~fs.writeFileSync fs.js:1286:28
+      1    0.0%    0.0%  Function: ~format util.js:182:16
+      1    0.0%    0.0%  Function: ~forEachMimeType C:\node\cryptodev\node_modules\mime-types\index.js:158:52
+      1    0.0%    0.0%  Function: ~forEachMimeType C:\node\cryptodev\node_modules\accepts\node_modules\mime-types\index.js:158:52
+      1    0.0%    0.0%  Function: ~flow _stream_readable.js:843:14
+      1    0.0%    0.0%  Function: ~finishMaybe _stream_writable.js:598:21
+      1    0.0%    0.0%  Function: ~exports.isMongooseObject C:\node\cryptodev\node_modules\mongoose\lib\utils.js:432:36
+      1    0.0%    0.0%  Function: ~exports._unrefActive timers.js:148:32
+      1    0.0%    0.0%  Function: ~exports.XMLHttpRequest C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:18:34
+      1    0.0%    0.0%  Function: ~endSessions C:\node\cryptodev\node_modules\mongodb\lib\topologies\topology_base.js:296:14
+      1    0.0%    0.0%  Function: ~endSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:47:13
+      1    0.0%    0.0%  Function: ~emitMessageHandler C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:283:34
+      1    0.0%    0.0%  Function: ~emitBeforeScript async_hooks.js:429:26
+      1    0.0%    0.0%  Function: ~done _tls_wrap.js:347:16
+      1    0.0%    0.0%  Function: ~doFlaggedDeprecation buffer.js:135:13
+      1    0.0%    0.0%  Function: ~debug C:\node\cryptodev\node_modules\debug\src\debug.js:65:17
+      1    0.0%    0.0%  Function: ~cursor C:\node\cryptodev\node_modules\mongodb\lib\topologies\topology_base.js:342:9
+      1    0.0%    0.0%  Function: ~createImmediate timers.js:856:25
+      1    0.0%    0.0%  Function: ~copyObject C:\node\cryptodev\node_modules\ethers-providers\provider.js:34:20
+      1    0.0%    0.0%  Function: ~copy C:\node\cryptodev\node_modules\bn.js\lib\bn.js:309:37
+      1    0.0%    0.0%  Function: ~coderTuple C:\node\cryptodev\node_modules\ethers-contracts\interface.js:417:20
+      1    0.0%    0.0%  Function: ~coderNumber C:\node\cryptodev\node_modules\ethers-contracts\interface.js:104:21
+      1    0.0%    0.0%  Function: ~cloneObject C:\node\cryptodev\node_modules\mongoose\lib\utils.js:238:21
+      1    0.0%    0.0%  Function: ~clone C:\node\cryptodev\node_modules\mongoose\lib\utils.js:153:31
+      1    0.0%    0.0%  Function: ~checkOffset buffer.js:970:21
+      1    0.0%    0.0%  Function: ~checkIsHttpToken _http_common.js:282:26
+      1    0.0%    0.0%  Function: ~check tls.js:102:15
+      1    0.0%    0.0%  Function: ~callSocketMethod _http_client.js:682:28
+      1    0.0%    0.0%  Function: ~callSiteLocation C:\node\cryptodev\node_modules\depd\index.js:249:27
+      1    0.0%    0.0%  Function: ~bigNumberify C:\node\cryptodev\node_modules\ethers-utils\bignumber.js:140:22
+      1    0.0%    0.0%  Function: ~assertSize buffer.js:210:20
+      1    0.0%    0.0%  Function: ~assertEncoding internal/fs.js:19:24
+      1    0.0%    0.0%  Function: ~arrayify C:\node\cryptodev\node_modules\ethers-utils\convert.js:35:18
+      1    0.0%    0.0%  Function: ~arrayClone events.js:509:20
+      1    0.0%    0.0%  Function: ~alloc internal/freelist.js:11:8
+      1    0.0%    0.0%  Function: ~adjustOffset buffer.js:945:22
+      1    0.0%    0.0%  Function: ~addSlice C:\node\cryptodev\node_modules\ethers-utils\convert.js:9:18
+      1    0.0%    0.0%  Function: ~addChunk _stream_readable.js:261:18
+      1    0.0%    0.0%  Function: ~_verify2 C:\node\cryptodev\node_modules\bn.js\lib\bn.js:3140:46
+      1    0.0%    0.0%  Function: ~_tickCallback internal/process/next_tick.js:151:25
+      1    0.0%    0.0%  Function: ~_send _http_outgoing.js:216:49
+      1    0.0%    0.0%  Function: ~_initNumber C:\node\cryptodev\node_modules\bn.js\lib\bn.js:113:51
+      1    0.0%    0.0%  Function: ~_implicitHeader _http_client.js:290:67
+      1    0.0%    0.0%  Function: ~_finish _http_client.js:283:51
+      1    0.0%    0.0%  Function: ~_execute C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1376:18
+      1    0.0%    0.0%  Function: ~_evictSession https.js:211:55
+      1    0.0%    0.0%  Function: ~_cacheSession https.js:189:55
+      1    0.0%    0.0%  Function: ~_addListener events.js:233:22
+      1    0.0%    0.0%  Function: ~Writable.cork _stream_writable.js:296:35
+      1    0.0%    0.0%  Function: ~WireProtocol.command C:\node\cryptodev\node_modules\mongodb-core\lib\wireprotocol\3_2_support.js:280:42
+      1    0.0%    0.0%  Function: ~Uint8ArrayConstructByIterable.W.(anonymous function) native typedarray.js:137:14
+      1    0.0%    0.0%  Function: ~TickObject internal/process/next_tick.js:234:16
+      1    0.0%    0.0%  Function: ~TLSSocket._finishInit _tls_wrap.js:614:43
+      1    0.0%    0.0%  Function: ~SpeciesConstructor native typedarray.js:54:28
+      1    0.0%    0.0%  Function: ~SchemaType._applySetters C:\node\cryptodev\node_modules\mongoose\lib\schematype.js:663:46
+      1    0.0%    0.0%  Function: ~Readable.read _stream_readable.js:365:35
+      1    0.0%    0.0%  Function: ~Readable.on _stream_readable.js:771:33
+      1    0.0%    0.0%  Function: ~Readable _stream_readable.js:140:18
+      1    0.0%    0.0%  Function: ~ReadPreference.slaveOk C:\node\cryptodev\node_modules\mongodb-core\lib\topologies\read_preference.js:115:44
+      1    0.0%    0.0%  Function: ~Query.toBin C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:89:33
+      1    0.0%    0.0%  Function: ~Query.findOne C:\node\cryptodev\node_modules\mongoose\lib\query.js:1561:35
+      1    0.0%    0.0%  Function: ~Query.canMerge C:\node\cryptodev\node_modules\mquery\lib\mquery.js:3012:27
+      1    0.0%    0.0%  Function: ~Query._findOne C:\node\cryptodev\node_modules\mongoose\lib\query.js:1484:36
+      1    0.0%    0.0%  Function: ~Query C:\node\cryptodev\node_modules\mongoose\lib\query.js:45:15
+      1    0.0%    0.0%  Function: ~Pool.isConnected C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:650:38
+      1    0.0%    0.0%  Function: ~ObjectId.cast C:\node\cryptodev\node_modules\mongoose\lib\schema\objectid.js:90:35
+      1    0.0%    0.0%  Function: ~ObjectID C:\node\cryptodev\node_modules\bson\lib\bson\objectid.js:28:33
+      1    0.0%    0.0%  Function: ~NativeModule.nonInternalExists bootstrap_node.js:561:46
+      1    0.0%    0.0%  Function: ~NativeModule.isInternal bootstrap_node.js:565:39
+      1    0.0%    0.0%  Function: ~NativeModule.getCached bootstrap_node.js:546:36
+      1    0.0%    0.0%  Function: ~Module._findPath module.js:174:28
+      1    0.0%    0.0%  Function: ~Module._extensions..js module.js:644:37
+      1    0.0%    0.0%  Function: ~Module._compile module.js:592:37
+      1    0.0%    0.0%  Function: ~Module module.js:66:16
+      1    0.0%    0.0%  Function: ~Model C:\node\cryptodev\node_modules\mongoose\lib\model.js:53:15
+      1    0.0%    0.0%  Function: ~Long.toNumber C:\node\cryptodev\node_modules\bson\lib\bson\long.js:76:35
+      1    0.0%    0.0%  Function: ~Long.subtract C:\node\cryptodev\node_modules\bson\lib\bson\long.js:380:35
+      1    0.0%    0.0%  Function: ~Long.not C:\node\cryptodev\node_modules\bson\lib\bson\long.js:559:30
+      1    0.0%    0.0%  Function: ~Long.isZero C:\node\cryptodev\node_modules\bson\lib\bson\long.js:205:33
+      1    0.0%    0.0%  Function: ~Long.greaterThanOrEqual C:\node\cryptodev\node_modules\bson\lib\bson\long.js:291:45
+      1    0.0%    0.0%  Function: ~Logger.isDebug C:\node\cryptodev\node_modules\mongodb-core\lib\connection\logger.js:181:39
+      1    0.0%    0.0%  Function: ~Kareem.execPost C:\node\cryptodev\node_modules\kareem\index.js:119:37
+      1    0.0%    0.0%  Function: ~InnerArraySort native array.js:530:24
+      1    0.0%    0.0%  Function: ~InnerArrayJoin native array.js:275:24
+      1    0.0%    0.0%  Function: ~GetHash native collection.js:85:17
+      1    0.0%    0.0%  Function: ~FastBuffer buffer.js:37:14
+      1    0.0%    0.0%  Function: ~EventEmitter events.js:27:22
+      1    0.0%    0.0%  Function: ~Duplex _stream_duplex.js:44:16
+      1    0.0%    0.0%  Function: ~Document.populated C:\node\cryptodev\node_modules\mongoose\lib\document.js:2555:40
+      1    0.0%    0.0%  Function: ~Document.$__init C:\node\cryptodev\node_modules\mongoose\lib\document.js:337:38
+      1    0.0%    0.0%  Function: ~Document.$__buildDoc C:\node\cryptodev\node_modules\mongoose\lib\document.js:178:42
+      1    0.0%    0.0%  Function: ~DoJoin native array.js:95:16
+      1    0.0%    0.0%  Function: ~Define.classMethod C:\node\cryptodev\node_modules\mongodb\lib\metadata.js:12:40
+      1    0.0%    0.0%  Function: ~Cursor.next C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:241:33
+      1    0.0%    0.0%  Function: ~Cursor.next C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:790:33
+      1    0.0%    0.0%  Function: ~Cursor.isDead C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:372:35
+      1    0.0%    0.0%  Function: ~Collection.addQueue C:\node\cryptodev\node_modules\mongoose\lib\collection.js:113:41
+      1    0.0%    0.0%  Function: ~ClientSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:13:14
+      1    0.0%    0.0%  Function: ~CallDescription C:\node\cryptodev\node_modules\ethers-contracts\interface.js:539:25
+      1    0.0%    0.0%  Function: ~Buffer.toString buffer.js:607:37
+      1    0.0%    0.0%  Function: ~Buffer.readInt32LE buffer.js:1122:40
+      1    0.0%    0.0%  Function: ~Buffer.alloc buffer.js:232:24
+      1    0.0%    0.0%  Function: ~Agent _http_agent.js:43:15
+      1    0.0%    0.0%  Function: ~<anonymous> _tls_wrap.js:1091:31
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mquery\lib\utils.js:118:18
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongoose\lib\query.js:1500:46
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:540:41
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\kareem\index.js:22:37
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\js-sha3\src\sha3.js:34:21
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-utils\bignumber.js:129:60
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:718:58
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:56:21
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:545:53
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\fallback-provider.js:42:32
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\interface.js:829:57
+      1    0.0%    0.0%  Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\interface.js:288:27
+      1    0.0%    0.0%  Function: ~$getMaxListeners events.js:89:26
+      1    0.0%    0.0%  Builtin: Typeof
+      1    0.0%    0.0%  Builtin: TypedArrayPrototypeLength
+      1    0.0%    0.0%  Builtin: TypedArrayInitializeWithBuffer
+      1    0.0%    0.0%  Builtin: TypedArrayConstructByLength
+      1    0.0%    0.0%  Builtin: StringPrototypeToString
+      1    0.0%    0.0%  Builtin: StringPrototypeStartsWith
+      1    0.0%    0.0%  Builtin: RegExpExecAtom
+      1    0.0%    0.0%  Builtin: PromiseRejectClosure
+      1    0.0%    0.0%  Builtin: ObjectAssign
+      1    0.0%    0.0%  Builtin: NumberConstructor
+      1    0.0%    0.0%  Builtin: JsonStringify
+      1    0.0%    0.0%  Builtin: JSEntryTrampoline
+      1    0.0%    0.0%  Builtin: InterpreterPushUndefinedAndArgsThenCall
+      1    0.0%    0.0%  Builtin: FunctionPrototypeCall
+      1    0.0%    0.0%  Builtin: FastNewFunctionContextFunction
+      1    0.0%    0.0%  Builtin: DateNow
+      1    0.0%    0.0%  Builtin: ConstructFunction
+      1    0.0%    0.0%  Builtin: AsyncFunctionAwaitResolveClosure
+      1    0.0%    0.0%  Builtin: AsyncFunctionAwaitCaught
+      1    0.0%    0.0%  Builtin: ArrayReduce
+      1    0.0%    0.0%  Builtin: ArrayMap
+      1    0.0%    0.0%  Builtin: ArrayIsArray
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+   6824   23.3%   92.0%  JavaScript
+      0    0.0%    0.0%  C++
+   4691   16.0%   63.3%  GC
+  21927   74.7%          Shared libraries
+    591    2.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  18585   63.3%  C:\Program Files (x86)\nodejs\node.exe
+   9806   52.8%    C:\Program Files (x86)\nodejs\node.exe
+   1412   14.4%      LazyCompile: *SecureContext _tls_common.js:34:23
+   1412  100.0%        Function: ~createSecureContext _tls_common.js:57:59
+   1412  100.0%          LazyCompile: *exports.connect _tls_wrap.js:1018:27
+   1412  100.0%            LazyCompile: *createConnection https.js:82:26
+    868    8.9%      Function: ~createSecureContext _tls_common.js:57:59
+    841   96.9%        LazyCompile: *exports.connect _tls_wrap.js:1018:27
+    775   92.2%          LazyCompile: *createConnection https.js:82:26
+    775  100.0%            LazyCompile: *addRequest _http_agent.js:140:49
+     66    7.8%          Function: ~createConnection https.js:82:26
+     51   77.3%            LazyCompile: *addRequest _http_agent.js:140:49
+     15   22.7%            Function: ~createSocket _http_agent.js:203:53
+     27    3.1%        Function: ~exports.connect _tls_wrap.js:1018:27
+     27  100.0%          Function: ~createConnection https.js:82:26
+     27  100.0%            Function: ~createSocket _http_agent.js:203:53
+    814    8.3%      LazyCompile: *internalConnect net.js:904:25
+    494   60.7%        LazyCompile: *emitLookup net.js:1087:44
+    480   97.2%          LazyCompile: *onlookup dns.js:90:18
+     14    2.8%          Function: ~onlookup dns.js:90:18
+    320   39.3%        Function: ~emitLookup net.js:1087:44
+    190   59.4%          LazyCompile: *onlookup dns.js:90:18
+    130   40.6%          Function: ~onlookup dns.js:90:18
+    604    6.2%      Function: ~SecureContext _tls_common.js:34:23
+    604  100.0%        Function: ~createSecureContext _tls_common.js:57:59
+    594   98.3%          LazyCompile: *exports.connect _tls_wrap.js:1018:27
+    474   79.8%            LazyCompile: *createConnection https.js:82:26
+    120   20.2%            Function: ~createConnection https.js:82:26
+     10    1.7%          Function: ~exports.connect _tls_wrap.js:1018:27
+     10  100.0%            Function: ~createConnection https.js:82:26
+    263    2.7%      Function: ~methodProxy _tls_wrap.js:328:30
+    263  100.0%        Function: ~internalConnect net.js:904:25
+    263  100.0%          Function: ~emitLookup net.js:1087:44
+    263  100.0%            Function: ~onlookup dns.js:90:18
+    251    2.6%      Function: ~createWriteReq net.js:789:24
+    168   66.9%        LazyCompile: *Socket._writeGeneric net.js:708:42
+    163   97.0%          LazyCompile: *Connection.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:704:38
+    163  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1394:25
+      5    3.0%          Function: ~Socket._write net.js:785:35
+      5  100.0%            Function: ~doWrite _stream_writable.js:379:17
+     83   33.1%        Function: ~Socket._writeGeneric net.js:708:42
+     82   98.8%          Function: ~Socket._write net.js:785:35
+     82  100.0%            Function: ~doWrite _stream_writable.js:379:17
+      1    1.2%          LazyCompile: *doWrite _stream_writable.js:379:17
+      1  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1394:25
+    230    2.3%      Builtin: NumberParseInt
+    125   54.3%        LazyCompile: *getChecksumAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:8:28
+    125  100.0%          Function: ~getAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:77:20
+     94   75.2%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:56:21
+     14   11.2%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:842:65
+     11    8.8%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      6    4.8%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:56:21
+     78   33.9%        LazyCompile: *arrayify C:\node\cryptodev\node_modules\ethers-utils\convert.js:35:18
+     29   37.2%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+     29  100.0%            Builtin: PromiseHandle
+     27   34.6%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+     27  100.0%            Builtin: ArrayForEach
+     15   19.2%          Builtin: ArrayForEach
+     15  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      3    3.8%          LazyCompile: *encode C:\node\cryptodev\node_modules\ethers-contracts\interface.js:110:25
+      3  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\interface.js:283:28
+      3    3.8%          Function: ~encode C:\node\cryptodev\node_modules\ethers-contracts\interface.js:110:25
+      2   66.7%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\interface.js:283:28
+      1   33.3%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\interface.js:283:28
+      1    1.3%          LazyCompile: *Promise.all.tokenIds.map C:\node\cryptodev\contract-parser.js:183:36
+      1  100.0%            Builtin: ArrayForEach
+     10    4.3%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:842:65
+     10  100.0%          Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+     10  100.0%            Builtin: ArrayForEach
+      7    3.0%        LazyCompile: *getParamCoder C:\node\cryptodev\node_modules\ethers-contracts\interface.js:483:23
+      7  100.0%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\interface.js:819:27
+      7  100.0%            Builtin: ArrayForEach
+      7    3.0%        LazyCompile: *Readable.read _stream_readable.js:365:35
+      3   42.9%          LazyCompile: *resume_ _stream_readable.js:819:17
+      3  100.0%            LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      2   28.6%          Function: ~socketErrorListener _http_client.js:381:29
+      2  100.0%            LazyCompile: *emitOne events.js:114:17
+      1   14.3%          LazyCompile: *flow _stream_readable.js:843:14
+      1  100.0%            Function: ~resume_ _stream_readable.js:819:17
+      1   14.3%          Function: ~socketCloseListener _http_client.js:337:29
+      1  100.0%            LazyCompile: *emitOne events.js:114:17
+    223    2.3%      LazyCompile: *deserializeObject C:\node\cryptodev\node_modules\bson\lib\bson\parser\deserializer.js:39:33
+    199   89.2%        LazyCompile: *deserializeObject C:\node\cryptodev\node_modules\bson\lib\bson\parser\deserializer.js:39:33
+    122   61.3%          LazyCompile: *deserializeObject C:\node\cryptodev\node_modules\bson\lib\bson\parser\deserializer.js:39:33
+    119   97.5%            LazyCompile: *deserializeObject C:\node\cryptodev\node_modules\bson\lib\bson\parser\deserializer.js:39:33
+      3    2.5%            LazyCompile: *Response.parse C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:436:36
+     73   36.7%          LazyCompile: *Response.parse C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:436:36
+     55   75.3%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:549:54
+     18   24.7%            Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:549:54
+      4    2.0%          Function: ~deserialize C:\node\cryptodev\node_modules\bson\lib\bson\parser\deserializer.js:19:27
+      4  100.0%            Function: ~BSON.deserialize C:\node\cryptodev\node_modules\bson\lib\bson\bson.js:114:38
+     22    9.9%        LazyCompile: *Response.parse C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:436:36
+     19   86.4%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:549:54
+     19  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:452:18
+      3   13.6%          Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:549:54
+      3  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:452:18
+    206    2.1%      LazyCompile: *endSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:47:13
+    206  100.0%        Function: ~args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+    167   81.1%          LazyCompile: *handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+    167  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     21   10.2%          Function: ~handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+     21  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     18    8.7%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     18  100.0%            Function: ~args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+    187    1.9%      LazyCompile: *TLSSocket._wrapHandle _tls_wrap.js:370:43
+    187  100.0%        LazyCompile: *TLSSocket _tls_wrap.js:265:19
+    187  100.0%          LazyCompile: *exports.connect _tls_wrap.js:1018:27
+    186   99.5%            LazyCompile: *createConnection https.js:82:26
+    154    1.6%      Function: ~createScript vm.js:79:22
+    154  100.0%        Function: ~runInThisContext vm.js:138:26
+    154  100.0%          Function: ~Module._compile module.js:592:37
+    154  100.0%            Function: ~Module._extensions..js module.js:644:37
+    153    1.6%      LazyCompile: *methodProxy _tls_wrap.js:328:30
+    148   96.7%        Function: ~internalConnect net.js:904:25
+    147   99.3%          Function: ~emitLookup net.js:1087:44
+    147  100.0%            Function: ~onlookup dns.js:90:18
+      5    3.3%        Function: ~Socket._getsockname net.js:675:41
+      5  100.0%          Function: ~internalConnect net.js:904:25
+      4   80.0%            Function: ~emitLookup net.js:1087:44
+      1   20.0%            LazyCompile: *emitLookup net.js:1087:44
+    144    1.5%      Builtin: TypedArrayConstructByArrayLike
+    142   98.6%        LazyCompile: *Uint8ArrayConstructByIterable native typedarray.js:127:39
+    142  100.0%          LazyCompile: *Uint8Array native typedarray.js:158:31
+     86   60.6%            LazyCompile: *getChecksumAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:8:28
+     43   30.3%            LazyCompile: *keccak256 C:\node\cryptodev\node_modules\ethers-utils\keccak256.js:7:19
+     12    8.5%            LazyCompile: *arrayify C:\node\cryptodev\node_modules\ethers-utils\convert.js:35:18
+      2    1.4%        LazyCompile: *Uint8ArrayConstructByTypedArray native typedarray.js:144:41
+      2  100.0%          LazyCompile: *Uint8Array native typedarray.js:158:31
+      2  100.0%            LazyCompile: *arrayify C:\node\cryptodev\node_modules\ethers-utils\convert.js:35:18
+    132    1.3%      LazyCompile: *Uint8ArrayConstructByIterable native typedarray.js:127:39
+    131   99.2%        LazyCompile: *Uint8Array native typedarray.js:158:31
+     77   58.8%          LazyCompile: *getChecksumAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:8:28
+     77  100.0%            Function: ~getAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:77:20
+     48   36.6%          LazyCompile: *keccak256 C:\node\cryptodev\node_modules\ethers-utils\keccak256.js:7:19
+     18   37.5%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+     11   22.9%            Builtin: ArrayForEach
+     10   20.8%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:842:65
+      9   18.8%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      6    4.6%          LazyCompile: *arrayify C:\node\cryptodev\node_modules\ethers-utils\convert.js:35:18
+      2   33.3%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      2   33.3%            Function: ~keccak256 C:\node\cryptodev\node_modules\ethers-utils\keccak256.js:7:19
+      1   16.7%            LazyCompile: *encode C:\node\cryptodev\node_modules\ethers-contracts\interface.js:110:25
+      1   16.7%            Builtin: ArrayForEach
+    120    1.2%      LazyCompile: *args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+     94   78.3%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     94  100.0%          LazyCompile: *args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+     52   55.3%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:748:22
+     42   44.7%            LazyCompile: *handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+     24   20.0%        Function: ~handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+     24  100.0%          Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     24  100.0%            LazyCompile: *args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+      2    1.7%        LazyCompile: *handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+      2  100.0%          Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+      2  100.0%            LazyCompile: *args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+    113    1.2%      Builtin: StringPrototypeSplit
+     67   59.3%        LazyCompile: *getChecksumAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:8:28
+     67  100.0%          Function: ~getAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:77:20
+     45   67.2%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:56:21
+     11   16.4%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:842:65
+      8   11.9%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      3    4.5%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:56:21
+     11    9.7%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+     11  100.0%          Builtin: PromiseHandle
+     11  100.0%            Stub: CallApiCallbackStub
+     10    8.8%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+     10  100.0%          Builtin: ArrayForEach
+     10  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      9    8.0%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:842:65
+      9  100.0%          Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+      9  100.0%            Builtin: ArrayForEach
+      4    3.5%        Builtin: ArrayForEach
+      4  100.0%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      4  100.0%            Builtin: PromiseHandle
+      3    2.7%        Function: ~Document.isModified C:\node\cryptodev\node_modules\mongoose\lib\document.js:1106:41
+      3  100.0%          Function: ~_init C:\node\cryptodev\node_modules\mongoose\lib\document.js:389:17
+      3  100.0%            Function: ~init C:\node\cryptodev\node_modules\mongoose\lib\document.js:375:14
+      2    1.8%        LazyCompile: *get C:\node\cryptodev\node_modules\mongoose\lib\services\document\compile.js:120:20
+      1   50.0%          LazyCompile: *Promise.all.tokenIds.map C:\node\cryptodev\contract-parser.js:183:36
+      1  100.0%            Builtin: AsyncFunctionAwaitResolveClosure
+      1   50.0%          LazyCompile: *Document C:\node\cryptodev\node_modules\mongoose\lib\document.js:47:18
+      1  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongoose\lib\query.js:1500:46
+      2    1.8%        LazyCompile: *Document.$__buildDoc C:\node\cryptodev\node_modules\mongoose\lib\document.js:178:42
+      1   50.0%          LazyCompile: *Document C:\node\cryptodev\node_modules\mongoose\lib\document.js:47:18
+      1  100.0%            Function: ~Model C:\node\cryptodev\node_modules\mongoose\lib\model.js:53:15
+      1   50.0%          Function: ~Document C:\node\cryptodev\node_modules\mongoose\lib\document.js:47:18
+      1  100.0%            Function: ~Model C:\node\cryptodev\node_modules\mongoose\lib\model.js:53:15
+    101    1.0%      LazyCompile: *exports.XMLHttpRequest C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:18:34
+     69   68.3%        Builtin: PromiseConstructor
+     30   43.5%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:100:65
+     30  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:110:68
+     27   39.1%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:545:53
+     27  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\etherscan-provider.js:107:70
+     12   17.4%          Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:545:53
+     12  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\etherscan-provider.js:107:70
+     23   22.8%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:547:32
+     23  100.0%          Builtin: PromiseConstructor
+     23  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:100:65
+      8    7.9%        Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:547:32
+      8  100.0%          Builtin: PromiseConstructor
+      4   50.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:100:65
+      4   50.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:545:53
+     99    1.0%      Function: ~TLSSocket._wrapHandle _tls_wrap.js:370:43
+     81   81.8%        LazyCompile: *TLSSocket _tls_wrap.js:265:19
+     81  100.0%          LazyCompile: *exports.connect _tls_wrap.js:1018:27
+     81  100.0%            Function: ~createConnection https.js:82:26
+     18   18.2%        Function: ~TLSSocket _tls_wrap.js:265:19
+     11   61.1%          LazyCompile: *exports.connect _tls_wrap.js:1018:27
+     11  100.0%            Function: ~createConnection https.js:82:26
+      7   38.9%          Function: ~exports.connect _tls_wrap.js:1018:27
+      7  100.0%            Function: ~createConnection https.js:82:26
+   1755    9.4%    LazyCompile: *TLSSocket._wrapHandle _tls_wrap.js:370:43
+   1755  100.0%      LazyCompile: *TLSSocket _tls_wrap.js:265:19
+   1755  100.0%        LazyCompile: *exports.connect _tls_wrap.js:1018:27
+   1753   99.9%          LazyCompile: *createConnection https.js:82:26
+   1753  100.0%            LazyCompile: *addRequest _http_agent.js:140:49
+    474    2.6%    LazyCompile: *SecureContext _tls_common.js:34:23
+    474  100.0%      Function: ~createSecureContext _tls_common.js:57:59
+    474  100.0%        LazyCompile: *exports.connect _tls_wrap.js:1018:27
+    474  100.0%          LazyCompile: *createConnection https.js:82:26
+    474  100.0%            LazyCompile: *addRequest _http_agent.js:140:49
+
+   3267   11.1%  C:\WINDOWS\SYSTEM32\ntdll.dll
+    824   25.2%    C:\Program Files (x86)\nodejs\node.exe
+    166   20.1%      Function: ~ServerSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:110:14
+    166  100.0%        Function: ~acquire C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:147:10
+    146   88.0%          Function: ~ClientSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:13:14
+    146  100.0%            Function: ~startSession C:\node\cryptodev\node_modules\mongodb\lib\topologies\topology_base.js:292:15
+     20   12.0%          LazyCompile: *Collection.findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1339:40
+     20  100.0%            LazyCompile: *NativeCollection.(anonymous function) C:\node\cryptodev\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:111:43
+    109   13.2%      LazyCompile: *args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+     70   64.2%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     70  100.0%          LazyCompile: *args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+     56   80.0%            LazyCompile: *handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+     14   20.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:748:22
+     38   34.9%        Function: ~handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+     38  100.0%          Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     38  100.0%            LazyCompile: *args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+     84   10.2%      LazyCompile: *endSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:47:13
+     84  100.0%        Function: ~args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+     40   47.6%          LazyCompile: *handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+     40  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     25   29.8%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     25  100.0%            Function: ~args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+     19   22.6%          Function: ~handleCallback C:\node\cryptodev\node_modules\mongodb\lib\utils.js:123:30
+     19  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1355:23
+     68    8.3%      LazyCompile: *Pool.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1098:32
+     46   67.6%        LazyCompile: *nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+     44   95.7%          LazyCompile: *next C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:247:14
+     44  100.0%            LazyCompile: *findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1348:23
+      2    4.3%          LazyCompile: *nextObject C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:733:26
+      2  100.0%            Function: ~next C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:247:14
+     15   22.1%        Function: ~Cursor._find C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:187:34
+     15  100.0%          Function: ~nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+      9   60.0%            Function: ~Cursor.next C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:790:33
+      3   20.0%            LazyCompile: *nextObject C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:733:26
+      3   20.0%            LazyCompile: *next C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:247:14
+      7   10.3%        Function: ~nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+      7  100.0%          LazyCompile: *next C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:247:14
+      7  100.0%            LazyCompile: *findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1348:23
+     57    6.9%      LazyCompile: *ServerSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:110:14
+     57  100.0%        Function: ~acquire C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:147:10
+     57  100.0%          LazyCompile: *Collection.findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1339:40
+     57  100.0%            LazyCompile: *NativeCollection.(anonymous function) C:\node\cryptodev\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:111:43
+     40    4.9%      LazyCompile: *acquire C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:147:10
+     40  100.0%        LazyCompile: *Collection.findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1339:40
+     40  100.0%          LazyCompile: *NativeCollection.(anonymous function) C:\node\cryptodev\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:111:43
+     40  100.0%            LazyCompile: *Query._findOne C:\node\cryptodev\node_modules\mongoose\lib\query.js:1484:36
+     38    4.6%      LazyCompile: *hasTimedOut C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:120:14
+     33   86.8%        LazyCompile: *acquire C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:147:10
+     33  100.0%          LazyCompile: *Collection.findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1339:40
+     33  100.0%            LazyCompile: *NativeCollection.(anonymous function) C:\node\cryptodev\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:111:43
+      5   13.2%        Function: ~release C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:163:10
+      5  100.0%          Function: ~endSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:47:13
+      5  100.0%            Function: ~args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+     24    2.9%      LazyCompile: *nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+     24  100.0%        LazyCompile: *next C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:247:14
+     24  100.0%          LazyCompile: *findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1348:23
+     24  100.0%            LazyCompile: *Collection.findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1339:40
+     20    2.4%      Function: ~hasTimedOut C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:120:14
+     20  100.0%        Function: ~release C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:163:10
+     20  100.0%          Function: ~endSession C:\node\cryptodev\node_modules\mongodb-core\lib\sessions.js:47:13
+     20  100.0%            Function: ~args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+     20    2.4%      Function: ~Pool.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1098:32
+     13   65.0%        Function: ~Cursor._find C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:187:34
+     13  100.0%          Function: ~nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+     13  100.0%            Function: ~Cursor.next C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:790:33
+      7   35.0%        LazyCompile: *nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+      7  100.0%          LazyCompile: *next C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:247:14
+      7  100.0%            LazyCompile: *findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1348:23
+     18    2.2%      LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:549:54
+     18  100.0%        LazyCompile: *nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+     18  100.0%          LazyCompile: *next C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:247:14
+     18  100.0%            LazyCompile: *findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1348:23
+     17    2.1%      LazyCompile: *executeOperation C:\node\cryptodev\node_modules\mongodb\lib\utils.js:365:26
+     17  100.0%        Function: ~Collection.findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1339:40
+     13   76.5%          Function: ~NativeCollection.(anonymous function) C:\node\cryptodev\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:111:43
+      9   69.2%            Function: ~Collection.doQueue C:\node\cryptodev\node_modules\mongoose\lib\collection.js:124:40
+      4   30.8%            LazyCompile: *Query._findOne C:\node\cryptodev\node_modules\mongoose\lib\query.js:1484:36
+      4   23.5%          LazyCompile: *NativeCollection.(anonymous function) C:\node\cryptodev\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:111:43
+      4  100.0%            LazyCompile: *Query._findOne C:\node\cryptodev\node_modules\mongoose\lib\query.js:1484:36
+     17    2.1%      Builtin: TypedArrayConstructByLength
+     17  100.0%        LazyCompile: *Uint8Array native typedarray.js:158:31
+     16   94.1%          LazyCompile: *Query.toBin C:\node\cryptodev\node_modules\mongodb-core\lib\connection\commands.js:89:33
+      6   37.5%            LazyCompile: *Pool.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1098:32
+      3   18.8%            LazyCompile: *serializeCommands C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1044:33
+      3   18.8%            LazyCompile: *nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+      3   18.8%            LazyCompile: *Collection.find C:\node\cryptodev\node_modules\mongodb\lib\collection.js:233:37
+      1    6.3%            LazyCompile: *args.push C:\node\cryptodev\node_modules\mongodb\lib\utils.js:395:15
+      1    5.9%          Function: ~FastBuffer buffer.js:37:14
+      1  100.0%            Function: ~Buffer.alloc buffer.js:232:24
+     15    1.8%      LazyCompile: *Collection.find C:\node\cryptodev\node_modules\mongodb\lib\collection.js:233:37
+     15  100.0%        LazyCompile: *nextFunction C:\node\cryptodev\node_modules\mongodb-core\lib\cursor.js:558:28
+     15  100.0%          LazyCompile: *next C:\node\cryptodev\node_modules\mongodb\lib\cursor.js:247:14
+     15  100.0%            LazyCompile: *findOne C:\node\cryptodev\node_modules\mongodb\lib\collection.js:1348:23
+     14    1.7%      Builtin: StringPrototypeReplace
+     14  100.0%        LazyCompile: *format url.js:566:39
+     14  100.0%          LazyCompile: *parse url.js:101:37
+      9   64.3%            LazyCompile: *send C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:267:23
+      3   21.4%            LazyCompile: *urlParse url.js:93:18
+      2   14.3%            Function: ~urlParse url.js:93:18
+      9    1.1%      Function: ~autoEscapeStr url.js:442:23
+      9  100.0%        LazyCompile: *parse url.js:101:37
+      9  100.0%          LazyCompile: *send C:\node\cryptodev\node_modules\xmlhttprequest\lib\XMLHttpRequest.js:267:23
+      9  100.0%            Builtin: PromiseConstructor
+    293    9.0%    LazyCompile: *Socket._writeGeneric net.js:708:42
+     66   22.5%      LazyCompile: *Socket._write net.js:785:35
+     66  100.0%        Function: ~doWrite _stream_writable.js:379:17
+     66  100.0%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1394:25
+     66  100.0%            LazyCompile: *waitForAuth C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1385:25
+     65   22.2%      LazyCompile: *doWrite _stream_writable.js:379:17
+     65  100.0%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1394:25
+     65  100.0%          LazyCompile: *waitForAuth C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1385:25
+     65  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1377:18
+     63   21.5%      Function: ~Socket._write net.js:785:35
+     63  100.0%        Function: ~doWrite _stream_writable.js:379:17
+     60   95.2%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1394:25
+     60  100.0%            LazyCompile: *waitForAuth C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1385:25
+      3    4.8%          Function: ~writeOrBuffer _stream_writable.js:339:23
+      3  100.0%            Function: ~Writable.write _stream_writable.js:264:36
+     61   20.8%      LazyCompile: *Writable.write _stream_writable.js:264:36
+     61  100.0%        Function: ~Socket.write net.js:699:34
+     61  100.0%          Function: ~Connection.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:704:38
+     61  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1394:25
+     38   13.0%      LazyCompile: *Connection.write C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:704:38
+     38  100.0%        Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1394:25
+     38  100.0%          LazyCompile: *waitForAuth C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1385:25
+     38  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:1377:18
+    144    4.4%    LazyCompile: *fs.closeSync fs.js:611:24
+    144  100.0%      Function: ~fs.writeFileSync fs.js:1286:28
+    144  100.0%        Function: ~fs.appendFileSync fs.js:1327:29
+    128   88.9%          Function: ~logError C:\node\cryptodev\contract-parser.js:55:20
+    116   90.6%            Function: ~Promise.all.tokenIds.map C:\node\cryptodev\contract-parser.js:183:36
+     12    9.4%            Function: ~<anonymous> C:\node\cryptodev\contract-parser.js:84:10
+     16   11.1%          Function: ~logMsg C:\node\cryptodev\contract-parser.js:72:18
+     16  100.0%            Function: ~<anonymous> C:\node\cryptodev\contract-parser.js:84:10
+    102    3.1%    LazyCompile: *SecureContext _tls_common.js:34:23
+    102  100.0%      Function: ~createSecureContext _tls_common.js:57:59
+    102  100.0%        LazyCompile: *exports.connect _tls_wrap.js:1018:27
+    102  100.0%          LazyCompile: *createConnection https.js:82:26
+    102  100.0%            LazyCompile: *addRequest _http_agent.js:140:49
+     60    1.8%    LazyCompile: *TLSSocket._wrapHandle _tls_wrap.js:370:43
+     60  100.0%      LazyCompile: *TLSSocket _tls_wrap.js:265:19
+     60  100.0%        LazyCompile: *exports.connect _tls_wrap.js:1018:27
+     60  100.0%          LazyCompile: *createConnection https.js:82:26
+     60  100.0%            LazyCompile: *addRequest _http_agent.js:140:49
+     39    1.2%    LazyCompile: *lookup dns.js:122:16
+     39  100.0%      LazyCompile: *lookupAndConnect net.js:1034:26
+     39  100.0%        Function: ~Socket.connect net.js:977:36
+     39  100.0%          LazyCompile: *exports.connect _tls_wrap.js:1018:27
+     38   97.4%            LazyCompile: *createConnection https.js:82:26
+      1    2.6%            Function: ~createConnection https.js:82:26
+
+    895    3.1%  LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\pool.js:452:18
+    619   69.2%    LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:323:18
+    607   98.1%      Function: ~emitOne events.js:114:17
+    409   67.4%        LazyCompile: *emit events.js:156:44
+    409  100.0%          Function: ~addChunk _stream_readable.js:261:18
+    259   63.3%            Function: ~readableAddChunk _stream_readable.js:216:26
+    150   36.7%            LazyCompile: *onread net.js:576:16
+    198   32.6%        Function: ~emit events.js:156:44
+    198  100.0%          Function: ~addChunk _stream_readable.js:261:18
+    198  100.0%            Function: ~readableAddChunk _stream_readable.js:216:26
+     12    1.9%      LazyCompile: *emitOne events.js:114:17
+     12  100.0%        LazyCompile: *emit events.js:156:44
+     12  100.0%          Function: ~addChunk _stream_readable.js:261:18
+     12  100.0%            Function: ~readableAddChunk _stream_readable.js:216:26
+    240   26.8%    Function: ~emitMessageHandler C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:283:34
+    240  100.0%      Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:323:18
+    240  100.0%        Function: ~emitOne events.js:114:17
+    240  100.0%          Function: ~emit events.js:156:44
+    240  100.0%            Function: ~addChunk _stream_readable.js:261:18
+     36    4.0%    LazyCompile: *emitMessageHandler C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:283:34
+     30   83.3%      Function: ~<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:323:18
+     30  100.0%        Function: ~emitOne events.js:114:17
+     25   83.3%          LazyCompile: *emit events.js:156:44
+     25  100.0%            Function: ~addChunk _stream_readable.js:261:18
+      5   16.7%          Function: ~emit events.js:156:44
+      5  100.0%            Function: ~addChunk _stream_readable.js:261:18
+      6   16.7%      LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\mongodb-core\lib\connection\connection.js:323:18
+      6  100.0%        Function: ~emitOne events.js:114:17
+      4   66.7%          LazyCompile: *emit events.js:156:44
+      4  100.0%            Function: ~addChunk _stream_readable.js:261:18
+      2   33.3%          Function: ~emit events.js:156:44
+      2  100.0%            Function: ~addChunk _stream_readable.js:261:18
+
+    591    2.0%  UNKNOWN
+     20    3.4%    LazyCompile: *getChecksumAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:8:28
+     20  100.0%      Function: ~getAddress C:\node\cryptodev\node_modules\ethers-utils\address.js:77:20
+     15   75.0%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:56:21
+     14   93.3%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:720:75
+     14  100.0%            Builtin: PromiseHandle
+      1    6.7%          LazyCompile: *check C:\node\cryptodev\node_modules\ethers-providers\provider.js:40:15
+      1  100.0%            Function: ~checkTransactionRequest C:\node\cryptodev\node_modules\ethers-providers\provider.js:273:33
+      3   15.0%        Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:842:65
+      3  100.0%          Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+      3  100.0%            Builtin: ArrayForEach
+      1    5.0%        Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:56:21
+      1  100.0%          LazyCompile: *check C:\node\cryptodev\node_modules\ethers-providers\provider.js:40:15
+      1  100.0%            Function: ~checkTransactionRequest C:\node\cryptodev\node_modules\ethers-providers\provider.js:273:33
+      1    5.0%        Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      1  100.0%          Builtin: PromiseHandle
+      1  100.0%            Stub: CallApiCallbackStub
+     12    2.0%    LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+     10    1.7%    LazyCompile: *keccak256 C:\node\cryptodev\node_modules\ethers-utils\keccak256.js:7:19
+      5   50.0%      LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      5  100.0%        Builtin: PromiseHandle
+      5  100.0%          Stub: CallApiCallbackStub
+      5  100.0%            LazyCompile: *_tickCallback internal/process/next_tick.js:151:25
+      3   30.0%      LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+      3  100.0%        Builtin: ArrayForEach
+      3  100.0%          LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      3  100.0%            Builtin: PromiseHandle
+      1   10.0%      LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:842:65
+      1  100.0%        Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:816:26
+      1  100.0%          Builtin: ArrayForEach
+      1  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      1   10.0%      Builtin: ArrayForEach
+      1  100.0%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-contracts\contract.js:121:53
+      1  100.0%          Builtin: PromiseHandle
+      1  100.0%            Stub: CallApiCallbackStub
+      9    1.5%    Function: ~request http.js:37:17
+      9  100.0%      Function: ~request https.js:225:35
+      6   66.7%        LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:547:32
+      6  100.0%          Builtin: PromiseConstructor
+      6  100.0%            LazyCompile: *<anonymous> C:\node\cryptodev\node_modules\ethers-providers\json-rpc-provider.js:100:65
+      3   33.3%        Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:547:32
+      3  100.0%          Builtin: PromiseConstructor
+      3  100.0%            Function: ~<anonymous> C:\node\cryptodev\node_modules\ethers-providers\provider.js:545:53
+

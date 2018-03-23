@@ -10,7 +10,7 @@
     "node": ">=7.6"
   },
   "scripts": {
-    "dev": "nodemon", 
+    "dev": "nodemon",
     "start": "node index.js"
   },
   "dependencies": {
@@ -20,15 +20,18 @@
     "cheerio": "^1.0.0-rc.2",
     "colors": "^1.1.2",
     "cuint": "^0.2.2",
+    "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "ethers": "^2.2.6",
     "ethers-wallet": "^2.1.8",
     "express": "^4.16.2",
     "gimmeproxy-request": "^1.0.11",
+    "heapdump": "^0.3.9",
     "moment": "^2.20.1",
     "mongoose": "^5.0.4",
     "node-env-file": "^0.1.8",
+    "node-gyp": "^3.6.2",
     "node-html-parser": "^1.1.6",
     "proxies-freeproxylist": "^1.0.0",
     "proxy-lists": "^1.14.1",
