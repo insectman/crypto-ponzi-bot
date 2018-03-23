@@ -12,7 +12,7 @@ module.exports = params => ((options = {}) => {
 
   let { requestRate } = options;
   if (!requestRate) {
-    requestRate = 2000;
+    requestRate = 300;
   }
 
   // const ids = {};
@@ -85,7 +85,7 @@ module.exports = params => ((options = {}) => {
         
         await contract.buyout(gameIndex, false, x, y, {
           value: utils.parseEther(price.toString()),
-          gasLimit: 200000,
+          gasLimit: 347563,
           gasPrice: 2260000000,
         });
         
