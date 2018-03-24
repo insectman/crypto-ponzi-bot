@@ -12,7 +12,7 @@ module.exports = params => ((options = {}) => {
 
   let { requestRate } = options;
   if (!requestRate) {
-    requestRate = 300;
+    requestRate = 150;
   }
 
   // const ids = {};
