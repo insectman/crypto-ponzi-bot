@@ -78,9 +78,6 @@ module.exports = params => ((options = {}) => {
       memTransactions[x][y] = true;
       try {
         let price = 0.021;
-        if (x !== 0 && x !== cols - 1 && y !== 0 && y !== rows - 1) {
-          price = 0.031;
-        }
         console.log(x, y, price);
         
         await contract.buyout(gameIndex, false, x, y, {
