@@ -29,15 +29,13 @@ module.exports = params => ((options = {}) => {
     if(!gameIndex) {
       console.log('starting gameIndex', newGameIndex);
     }
-    if(gameIndex && gameIndex !== newGameIndex) {
+    if(gameIndex && newGameIndex > gameIndex ) {
       console.log('newGameIndex', newGameIndex);
       isNewGame = false;
-    }
-    gameIndex = newGameIndex;
-    if (!gameSettings || gameIndex !== newGameIndex) {
       memTransactions = {};
       await getGameSettings(gameIndex);
     }
+    gameIndex = newGameIndex;
   }
 
   const getGameState = async () => {
